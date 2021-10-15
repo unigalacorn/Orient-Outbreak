@@ -1,4 +1,13 @@
 {
+  "scopedRegistries": [
+    {
+      "name": "NPM",
+      "url": "https://registry.npmjs.org",
+      "scopes": [
+        "com.fluid"
+      ]
+    }
+  ],
   "dependencies": {
     "com.unity.2d.animation": "5.0.7",
     "com.unity.2d.pixel-perfect": "4.0.1",
