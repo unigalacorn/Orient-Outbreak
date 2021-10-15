@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ImmunityBoosterManager : MonoBehaviour
 {
@@ -69,6 +70,12 @@ public class ImmunityBoosterManager : MonoBehaviour
         comboCounter = 0;
 
         comboText.text = "COMBO: " + comboCounter;
+    }
+
+    public void loadOverworldScene()
+    {
+        GameManager.instance.UpdateGameState(GameState.Exploration);
+        SceneManager.LoadScene("Overworld Scene");
     }
     #endregion
 }

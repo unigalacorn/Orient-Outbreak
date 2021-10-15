@@ -278,6 +278,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
+      objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
       value: Fruit (37)
@@ -338,6 +350,18 @@ PrefabInstance:
     - target: {fileID: 640965941307398041, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
       objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
@@ -400,6 +424,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
+      objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
       value: Fruit (43)
@@ -460,6 +496,18 @@ PrefabInstance:
     - target: {fileID: 640965941307398041, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
       objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
@@ -548,6 +596,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
+      objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
       value: Fruit (41)
@@ -609,6 +669,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
+      objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
       value: Fruit (12)
@@ -669,6 +741,18 @@ PrefabInstance:
     - target: {fileID: 640965941307398041, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
       objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
@@ -818,6 +902,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
+      objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
       value: Fruit (46)
@@ -879,6 +975,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
+      objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
       value: Fruit (47)
@@ -939,6 +1047,18 @@ PrefabInstance:
     - target: {fileID: 640965941307398041, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
       objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
@@ -1269,6 +1389,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
+      objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
       value: Fruit (34)
@@ -1329,6 +1461,18 @@ PrefabInstance:
     - target: {fileID: 640965941307398041, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
       objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
@@ -1561,6 +1705,63 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &410196599
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 410196600}
+  - component: {fileID: 410196601}
+  m_Layer: 0
+  m_Name: End of Song
+  m_TagString: End Flag
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &410196600
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410196599}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.04, y: 69.81, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1499361847}
+  m_RootOrder: 48
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &410196601
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410196599}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.36079237}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.491271, y: 0.27851528}
+  m_EdgeRadius: 0
 --- !u!1 &419609933 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
@@ -1637,6 +1838,18 @@ PrefabInstance:
     - target: {fileID: 640965941307398041, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
       objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
@@ -1725,6 +1938,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
+      objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
       value: Fruit (1)
@@ -1785,6 +2010,18 @@ PrefabInstance:
     - target: {fileID: 640965941307398041, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
       objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
@@ -1952,6 +2189,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
+      objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
       value: Fruit (25)
@@ -2038,6 +2287,18 @@ PrefabInstance:
     - target: {fileID: 640965941307398041, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
       objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
@@ -2126,6 +2387,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
+      objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
       value: Fruit (44)
@@ -2187,6 +2460,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
+      objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
       value: Fruit (14)
@@ -2247,6 +2532,18 @@ PrefabInstance:
     - target: {fileID: 640965941307398041, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
       objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
@@ -2392,6 +2689,18 @@ PrefabInstance:
     - target: {fileID: 640965941307398041, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
       objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
@@ -2575,6 +2884,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
+      objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
       value: Fruit (8)
@@ -2688,6 +3009,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
+      objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
       value: Fruit (30)
@@ -2775,6 +3108,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
+      objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
       value: Fruit (2)
@@ -2835,6 +3180,18 @@ PrefabInstance:
     - target: {fileID: 640965941307398041, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
       objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
@@ -2928,6 +3285,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
+      objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
       value: Fruit (24)
@@ -2988,6 +3357,18 @@ PrefabInstance:
     - target: {fileID: 640965941307398041, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
       objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
@@ -3050,6 +3431,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
+      objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
       value: Fruit (22)
@@ -3111,6 +3504,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
+      objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
       value: Fruit (18)
@@ -3171,6 +3576,18 @@ PrefabInstance:
     - target: {fileID: 640965941307398041, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
       objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
@@ -3259,6 +3676,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
+      objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
       value: Fruit (38)
@@ -3319,6 +3748,18 @@ PrefabInstance:
     - target: {fileID: 640965941307398041, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
       objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
@@ -3560,6 +4001,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
+      objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
       value: Fruit (29)
@@ -3620,6 +4073,18 @@ PrefabInstance:
     - target: {fileID: 640965941307398041, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
       objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
@@ -3764,6 +4229,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
+      objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
       value: Fruit (31)
@@ -3824,6 +4301,18 @@ PrefabInstance:
     - target: {fileID: 640965941307398041, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
       objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
@@ -4043,6 +4532,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
+      objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
       value: Fruit (42)
@@ -4121,9 +4622,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: 1196095023
+  m_SortingLayer: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5306fe2125aeef14b9dd74fe9e48bc34, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4264,6 +4765,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
+      objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
       value: Fruit (39)
@@ -4351,6 +4864,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
+      objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
       value: Fruit (17)
@@ -4436,6 +4961,7 @@ Transform:
   - {fileID: 351505391}
   - {fileID: 1134137442}
   - {fileID: 419609934}
+  - {fileID: 410196600}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4542,6 +5068,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
+      objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
       value: Fruit (23)
@@ -4602,6 +5140,18 @@ PrefabInstance:
     - target: {fileID: 640965941307398041, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
       objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
@@ -4900,7 +5450,7 @@ GameObject:
   - component: {fileID: 1746512673}
   - component: {fileID: 1746512674}
   m_Layer: 0
-  m_Name: Game Manager
+  m_Name: Minigame Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5378,6 +5928,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
+      objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
       value: Fruit (45)
@@ -5438,6 +6000,18 @@ PrefabInstance:
     - target: {fileID: 640965941307398041, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
       objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
@@ -5552,6 +6126,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
+      objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
       value: Fruit (7)
@@ -5612,6 +6198,18 @@ PrefabInstance:
     - target: {fileID: 640965941307398041, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
       objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
@@ -5699,6 +6297,18 @@ PrefabInstance:
     - target: {fileID: 640965941307398041, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
       objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
@@ -5889,9 +6499,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingLayerID: -1788286383
+  m_SortingLayer: 2
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e421f4f092b8eef4d8d8d22bcc18b110, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6055,6 +6665,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
+      objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name
       value: Fruit (16)
@@ -6193,6 +6815,18 @@ PrefabInstance:
     - target: {fileID: 640965941307398041, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 640965941307398042, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1788286383
       objectReference: {fileID: 0}
     - target: {fileID: 640965941307398043, guid: c4b6cd74277f0f748baa863326ed1fb2, type: 3}
       propertyPath: m_Name

@@ -13,5 +13,11 @@ public class MissFruit : MonoBehaviour
             Destroy(collision.gameObject);
             gameManagerScript.missFruit();
         }
+
+        if (collision.CompareTag("End Flag"))
+        {
+            //Show minigame score
+            gameManagerScript.loadOverworldScene(); //temp
+        }
     }
 }
