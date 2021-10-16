@@ -17,6 +17,11 @@ public class GameManager : MonoBehaviour
     public List<Item> inventory = new List<Item>();
     #endregion
 
+    // Testing
+    #region Flags
+    public bool hasInteractedWithTestNPC1 = false;
+    #endregion
+
     #region Unity Methods
     private void Awake()
     {
