@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MinigameNPC : MonoBehaviour
+public class DialogueNPC : MonoBehaviour
 {
     #region Variables
-    [SerializeField] private string minigameSceneName;
     private bool isPlayerInRange;
 
     [Header("Dialogue References")]
-    public DialogueManager dialogueManager;
-    public Dialogues dialogue;
+    [SerializeField] private DialogueManager dialogueManager;
+    [SerializeField] private Dialogues dialogue;
     #endregion
 
     #region Unity Methods
@@ -22,24 +21,11 @@ public class MinigameNPC : MonoBehaviour
 
     private void Update()
     {
-        //Debug.Log(Input.GetKeyDown("space"));
- 
-
-        if (Input.GetKeyUp("space") && isPlayerInRange)
+        if (Input.GetKeyUp("space") && isPlayerInRange && GameManager.instance.currentState != GameState.Dialogue)
         {
-            
-            isPlayerInRange = false; //So that dialogue will not start again once space has been clicked
-            
             //Start Dialogue
             GameManager.instance.UpdateGameState(GameState.Dialogue);     //Update Game State to Dialogue
             dialogueManager.StartDialogue(dialogue.dialogueList[0]); // start first dialogue in dialogue list
-
-
-
-            //If player accepts challenge, load scene with name "minigameScene"
-            //SceneManager.LoadScene(minigameSceneName);
-            //GameManager.instance.UpdateGameState(GameState.Minigame);       //Change to coroutine
-            //isPlayerInRange = true;
         }
     }
     #endregion 

@@ -15,9 +15,16 @@ public class GameManager : MonoBehaviour
     [SerializeField] private SpriteRenderer playerSprite;
     public List<Quest> questList = new List<Quest>();
     public List<Item> inventory = new List<Item>();
+
+    [Header("Day and Night Cycle")]
+    public DayCycles dayCycle;
+    public int day;
+    public float cycleCurrentTime;
+    public float cycleMaxTime = 60;
     #endregion
 
     // Testing
+    [Header("Flags")]
     #region Flags
     public bool hasInteractedWithTestNPC1 = false;
     #endregion
@@ -40,6 +47,8 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         UpdateGameState(GameState.Exploration);     //Temp
+        day = 1;       //temp
+        SetDayCycle((int)DayCycles.Morning); // start with sunrise state
     }
     #endregion
 
@@ -68,6 +77,12 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+    #endregion
+
+    #region Day and Night Cycle
+    public void SetDayCycle(int _cycle) => dayCycle = (DayCycles)_cycle;
+    public void SetDay(int _day) => day = _day;
+    public void SetCycleCurrentTime(float _time) => cycleCurrentTime = _time;
     #endregion
 
     #region Quest System
