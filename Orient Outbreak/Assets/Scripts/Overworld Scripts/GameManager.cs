@@ -15,9 +15,16 @@ public class GameManager : MonoBehaviour
     [SerializeField] private SpriteRenderer playerSprite;
     public List<Quest> questList = new List<Quest>();
     public List<Item> inventory = new List<Item>();
+
+    [Header("Day and Night Cycle")]
+    public DayCycles dayCycle;
+    public int day;
+    public float cycleCurrentTime;
+    public float cycleMaxTime = 60;
     #endregion
 
     // Testing
+    [Header("Flags")]
     #region Flags
     public bool hasInteractedWithTestNPC1 = false;
     #endregion
@@ -40,6 +47,8 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         UpdateGameState(GameState.Exploration);     //Temp
+        day = 1;       //temp
+        SetDayCycle((int)DayCycles.Morning); // start with sunrise state
     }
     #endregion
 
@@ -70,37 +79,56 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
+    #region Day and Night Cycle
+    public void SetDayCycle(int _cycle) => dayCycle = (DayCycles)_cycle;
+    public void SetDay(int _day) => day = _day;
+    public void SetCycleCurrentTime(float _time) => cycleCurrentTime = _time;
+    #endregion
+
     #region Quest System
     public void AddQuest(QuestName questName, string questDescription, int currentAmount, int requiredAmount)
     {
         questList.Add(new Quest(questName, questDescription, currentAmount, requiredAmount));
     }
 
-    //Check if quest is in quest list
+    public bool DoesQuestExist(QuestName questName)     //Method that checks if questName is in questList
+    {
+        for (int i = 0; i < questList.Count; i ++)
+        {
+            if (questList[i].GetQuestName() == questName)
+            {
+                return true;
+            }
+        }
 
-    //Check if quest is finished
+        return false;
+    }
+
+    public bool IsQuestFinished(QuestName questName) //Method that finds index of quest name and checks if it is finished
+    {
+        for (int i = 0; i < questList.Count; i++)
+        {
+            if (questList[i].GetQuestName() == questName)
+            {
+                return questList[i].IsQuestCompleted();
+            }
+        }
+
+        return false;
+    }
     #endregion
 
     #region Inventory System
     public void AddToInventory(ItemName itemName)   //Method that adds an item to inventory
     {
-        bool itemExist = false;
-
-        //Check if itemName is already an Item in inventory
         for (int i = 0; i < inventory.Count; i++)
         {
-            //If itemName exists in inventory, increment itemQuantity of existing Item 
+            //Find index and increase itemName's quantity
             if (inventory[i].GetItemName() == itemName)
             {
-                itemExist = true;
                 inventory[i].SetItemQuantity(inventory[i].GetItemQuantity() + 1);
                 return;
             }
-        }
-
-        if (!itemExist) //If itemName does not exist in inventory, create a new Item and add it to inventory
-        {
-            inventory.Add(new Item(itemName, 1));
         }
     }
     #endregion

@@ -10,6 +10,7 @@ public class Quest
     [SerializeField] private string questDescription;
     [SerializeField] private int currentAmount;
     [SerializeField] private int requiredAmount;
+    [SerializeField] private bool isQuestCompleted;
 
     public Quest(QuestName _questName, string _questDescription, int _currentAmount, int _requiredAmount)
     {
@@ -17,6 +18,7 @@ public class Quest
         questDescription = _questDescription;
         currentAmount = _currentAmount;
         requiredAmount = _requiredAmount;
+        isQuestCompleted = false;
     }
     #endregion
 
@@ -31,7 +33,11 @@ public class Quest
 
     public void SetCurrentAmount(int _currentAmount) => currentAmount = _currentAmount;     //currentAmount public setter
 
-    public bool isQuestCompleted() => currentAmount == requiredAmount ? true : false;       //check if quest is completed
+    public bool AreRequirementsMet() => currentAmount == requiredAmount ? true : false;       //check if requirements are met to complete quest
+
+    public bool IsQuestCompleted() => isQuestCompleted;      //check if quest is completed
+
+    public void CompleteQuest() => isQuestCompleted = true;     //complete quest
     #endregion
 }
 

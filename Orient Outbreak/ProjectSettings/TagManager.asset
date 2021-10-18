@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fruit
   - End Flag
+  - Light
   layers:
   - Default
   - TransparentFX

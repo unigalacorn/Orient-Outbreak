@@ -4,5 +4,16 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
-    public string itemType;
+    [SerializeField] private ShieldsUpManager shieldsUpManager;
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            //player collects item
+            shieldsUpManager.CollectItem();
+
+            Destroy(gameObject); 
+        }
+    }
 }
