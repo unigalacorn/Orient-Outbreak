@@ -91,31 +91,44 @@ public class GameManager : MonoBehaviour
         questList.Add(new Quest(questName, questDescription, currentAmount, requiredAmount));
     }
 
-    //Check if quest is in quest list
+    public bool DoesQuestExist(QuestName questName)     //Method that checks if questName is in questList
+    {
+        for (int i = 0; i < questList.Count; i ++)
+        {
+            if (questList[i].GetQuestName() == questName)
+            {
+                return true;
+            }
+        }
 
-    //Check if quest is finished
+        return false;
+    }
+
+    public bool IsQuestFinished(QuestName questName) //Method that finds index of quest name and checks if it is finished
+    {
+        for (int i = 0; i < questList.Count; i++)
+        {
+            if (questList[i].GetQuestName() == questName)
+            {
+                return questList[i].IsQuestCompleted();
+            }
+        }
+
+        return false;
+    }
     #endregion
 
     #region Inventory System
     public void AddToInventory(ItemName itemName)   //Method that adds an item to inventory
     {
-        bool itemExist = false;
-
-        //Check if itemName is already an Item in inventory
         for (int i = 0; i < inventory.Count; i++)
         {
-            //If itemName exists in inventory, increment itemQuantity of existing Item 
+            //Find index and increase itemName's quantity
             if (inventory[i].GetItemName() == itemName)
             {
-                itemExist = true;
                 inventory[i].SetItemQuantity(inventory[i].GetItemQuantity() + 1);
                 return;
             }
-        }
-
-        if (!itemExist) //If itemName does not exist in inventory, create a new Item and add it to inventory
-        {
-            inventory.Add(new Item(itemName, 1));
         }
     }
     #endregion

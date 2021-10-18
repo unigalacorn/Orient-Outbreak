@@ -57,7 +57,7 @@ public class ShieldsUpManager : MonoBehaviour
     {
         itemsCollected += 1;
 
-        collectedDisplay.text = "Items Collected: " + item;
+        collectedDisplay.text = "Items Collected: " + itemsCollected;
     }
     #endregion
 }

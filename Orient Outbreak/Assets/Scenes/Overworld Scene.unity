@@ -714,7 +714,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 816596798}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &569245300
 MonoBehaviour:
@@ -962,7 +962,7 @@ GameObject:
   - component: {fileID: 743921568}
   - component: {fileID: 743921567}
   m_Layer: 0
-  m_Name: TestNPC (2)
+  m_Name: Side Quest NPC Test
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -976,11 +976,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 743921565}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.149, y: 0.45771426, z: 1.9976457}
+  m_LocalPosition: {x: -0.783, y: 0.006, z: 1.9976457}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 816596798}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &743921567
 BoxCollider2D:
@@ -1086,9 +1086,9 @@ Transform:
   m_LocalPosition: {x: -0.27056515, y: -0.08170019, z: -1.9976457}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 743921566}
   - {fileID: 569245299}
   - {fileID: 1731454912}
-  - {fileID: 743921566}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2446,7 +2446,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 816596798}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1731454913
 BoxCollider2D:
@@ -2784,7 +2784,13 @@ MonoBehaviour:
   currentState: 0
   playerSprite: {fileID: 1345994668}
   questList: []
-  inventory: []
+  inventory:
+  - itemName: 0
+    itemQuantity: 0
+  - itemName: 1
+    itemQuantity: 0
+  - itemName: 2
+    itemQuantity: 0
   dayCycle: 1
   day: 0
   cycleCurrentTime: 0
