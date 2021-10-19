@@ -30,9 +30,9 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - Layer 1
+  - Layer 2
+  - Layer 3
   - 
   - 
   - 
@@ -46,9 +46,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Background
-    uniqueID: 1196095023
-    locked: 0
   - name: Layer 1
     uniqueID: 2266772603
     locked: 0
@@ -58,7 +55,10 @@ TagManager:
   - name: Layer 3
     uniqueID: 1788822181
     locked: 0
-  - name: Foreground
+  - name: Minigame Background
+    uniqueID: 1196095023
+    locked: 0
+  - name: Minigame Foreground
     uniqueID: 2506680913
     locked: 0
   - name: UI
