@@ -17,10 +17,16 @@ public class PlayerJump : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey("space") && isJumping == false)
+        //rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * moveSpeed, rb.velocity.y);
+        if (Input.GetKeyDown("space") && !isJumping)
         {
             rb.velocity = new Vector3(0, 20, 0);
             isJumping = true;
+        }
+
+        if (Input.GetKeyUp("space") && rb.velocity.y > 0)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * .5f);
         }
     }
 
