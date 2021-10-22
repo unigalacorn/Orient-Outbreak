@@ -10,6 +10,8 @@ public class ImmunityBoosterManager : MonoBehaviour
     [SerializeField] private AudioSource soundtrack;
     [SerializeField] private Transform fruitHolderTransform;
     [SerializeField] private float tempo;
+    [SerializeField] private Animator cameraHolderAnim;
+
     private bool hasStarted;
 
     [Header("Score System")]
@@ -70,6 +72,11 @@ public class ImmunityBoosterManager : MonoBehaviour
         comboCounter = 0;
 
         comboText.text = "COMBO: " + comboCounter;
+    }
+
+    public void CameraShake()
+    {
+        cameraHolderAnim.SetTrigger("shake");
     }
 
     public void loadOverworldScene()
