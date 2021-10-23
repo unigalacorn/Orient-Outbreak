@@ -24,20 +24,28 @@ public class SideQuestNPC : MonoBehaviour
     {
         if (Input.GetKeyDown("space") && isPlayerInRange && GameManager.instance.currentState != GameState.Dialogue)
         {
-            //Start Dialogue
             GameManager.instance.UpdateGameState(GameState.Dialogue);     //Update Game State to Dialogue
 
-            if (!GameManager.instance.DoesQuestExist(sideQuest))        //If quest does not exist
+            //Accepting Quest Dialogue
+            if (!GameManager.instance.DoesQuestExist(sideQuest))        
             {
-                //Start dialogue where npc offers quest
+                dialogueManager.StartDialogue(dialogue.dialogueList[0]); 
             }
-            else if (!GameManager.instance.IsQuestFinished(sideQuest))     //If quest exists and not completed
+            //Waiting For Quest Dialogue
+            else if (!GameManager.instance.IsQuestFinished(sideQuest) && !GameManager.instance.AreRequirementsMet(sideQuest))     
             {
-                //Start dialogue of npc waiting for the quest to be completed
+                dialogueManager.StartDialogue(dialogue.dialogueList[1]);
             }
-            else if (GameManager.instance.IsQuestFinished(sideQuest))       //If quest exists and completed
+            //Turning In Quest
+            else if (!GameManager.instance.IsQuestFinished(sideQuest) && GameManager.instance.AreRequirementsMet(sideQuest))     //If quest exists and not completed
             {
-                //Start dialogue of npc thanking the player
+                GameManager.instance.TurnInQuest(sideQuest);
+                dialogueManager.StartDialogue(dialogue.dialogueList[2]);
+            }
+            //Finished Quest
+            else if (GameManager.instance.IsQuestFinished(sideQuest))       
+            {
+                dialogueManager.StartDialogue(dialogue.dialogueList[3]);
             }
         }
     }

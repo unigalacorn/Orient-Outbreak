@@ -10,16 +10,28 @@ namespace Dialogue
 		//GameManager gm;
 
 		public QuestName questName;
-		public string questDescription;
-		public int currentAmount;
 		public int requiredAmount;
+		private int currentAmount;
 
 		public override void Trigger()
 		{
-			GameManager.instance.hasInteractedWithTestNPC1 = true; 
-			Debug.Log(GameManager.instance.hasInteractedWithTestNPC1);
-			GameManager.instance.AddQuest(questName, questDescription, currentAmount, requiredAmount);
-			Debug.Log("ENTERED!!");
+			if (questName == QuestName.Antivaxx)
+            {
+				currentAmount = GameManager.instance.GetItemQuantity(ItemName.Facts);
+				GameManager.instance.AddQuest(questName, currentAmount, requiredAmount);
+			}
+			else if (questName == QuestName.CleanTrash)
+            {
+				GameManager.instance.AddQuest(questName, 0, requiredAmount);
+			}
+			else if (questName == QuestName.DeliverFood)
+            {
+				GameManager.instance.AddQuest(questName, 0, requiredAmount);
+			}
+			else if (questName == QuestName.LabGown)
+            {
+				GameManager.instance.AddQuest(questName, 0, requiredAmount);
+			}
 		}
 	}
 }

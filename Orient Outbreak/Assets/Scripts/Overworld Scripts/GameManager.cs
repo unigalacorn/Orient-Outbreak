@@ -86,9 +86,9 @@ public class GameManager : MonoBehaviour
     #endregion
 
     #region Quest System
-    public void AddQuest(QuestName questName, string questDescription, int currentAmount, int requiredAmount)
+    public void AddQuest(QuestName questName, int currentAmount, int requiredAmount)
     {
-        questList.Add(new Quest(questName, questDescription, currentAmount, requiredAmount));
+        questList.Add(new Quest(questName, currentAmount, requiredAmount));
     }
 
     public bool DoesQuestExist(QuestName questName)     //Method that checks if questName is in questList
@@ -116,6 +116,30 @@ public class GameManager : MonoBehaviour
 
         return false;
     }
+
+    public bool AreRequirementsMet(QuestName questName) //Method that finds index of quest name and checks if it is finished
+    {
+        for (int i = 0; i < questList.Count; i++)
+        {
+            if (questList[i].GetQuestName() == questName)
+            {
+                return questList[i].AreRequirementsMet();
+            }
+        }
+
+        return false;
+    }
+
+    public void TurnInQuest(QuestName questName)
+    {
+        for (int i = 0; i < questList.Count; i++)
+        {
+            if (questList[i].GetQuestName() == questName)
+            {
+                questList[i].CompleteQuest();
+            }
+        }
+    }
     #endregion
 
     #region Inventory System
@@ -130,6 +154,20 @@ public class GameManager : MonoBehaviour
                 return;
             }
         }
+    }
+
+    public int GetItemQuantity(ItemName itemName)
+    {
+        for (int i = 0; i < inventory.Count; i++)
+        {
+            //Find index and increase itemName's quantity
+            if (inventory[i].GetItemName() == itemName)
+            {
+                return inventory[i].GetItemQuantity();
+            }
+        }
+
+        return 0;
     }
     #endregion
 }
