@@ -4454,8 +4454,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4f91795a111158d4faaae8036b168670, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 75e2176e3fe10aa4d94493a749a8686d, type: 3}
+  m_Color: {r: 0.3207547, g: 0.30713776, b: 0.30713776, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4473,8 +4473,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 708046999}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.095, y: -0.087, z: 0}
-  m_LocalScale: {x: 0.28392428, y: 0.28392428, z: 0.28392428}
+  m_LocalPosition: {x: 0.0991, y: -0.0417, z: 0}
+  m_LocalScale: {x: 0.87715274, y: 0.87715274, z: 0.87715274}
   m_Children: []
   m_Father: {fileID: 1593807312}
   m_RootOrder: 2
@@ -7840,7 +7840,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5306fe2125aeef14b9dd74fe9e48bc34, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.053194046, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -10459,6 +10459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterHolder: {fileID: 340117461}
   immunityBoosterManager: {fileID: 1746512674}
+  fruitBurst: {fileID: 3593370306800754182, guid: a83f82ce130f60e4d87b74c362e35b12, type: 3}
 --- !u!50 &2061484314
 Rigidbody2D:
   serializedVersion: 4
