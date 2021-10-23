@@ -13,7 +13,7 @@ public class DialogueManager : MonoBehaviour
     int prev;       // used to check if current node is last node
     bool dialogueStarted;
     bool isReadyForNext;
-    int dialogueID = 0; // to solve getkey problem
+    int dialogueID; // to solve getkey problem
 
     [Header("Dialogue UI")]
     public GameObject DialogueUI;
@@ -37,12 +37,13 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown("space") || Input.GetMouseButtonDown(0) && dialogueID == 0)
+        Debug.Log(dialogueID);
+        if (Input.GetKeyDown("space") | Input.GetMouseButtonDown(0))
         {
             dialogueID++;
         }
 
-        if(Input.GetKeyDown("space") || Input.GetMouseButtonDown(0) && dialogueStarted && isReadyForNext)
+        if(Input.GetKeyDown("space") | Input.GetMouseButtonDown(0) && dialogueStarted && isReadyForNext)
         {
             if(dialogueID != 1)
             {
@@ -61,6 +62,7 @@ public class DialogueManager : MonoBehaviour
         selectedGraph = graph;
         selectedGraph.Restart();
         prev = -1;
+        dialogueID = 0;
 
         dialogueStarted = true;
         isReadyForNext = false;
