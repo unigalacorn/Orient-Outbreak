@@ -12,6 +12,8 @@ public class Obstacle : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            shieldsUpManager.CameraShake();
+
             //player takes damage
             shieldsUpManager.DecreasePlayerHealth();
 

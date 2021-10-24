@@ -19,6 +19,7 @@ public class ShieldsUpManager : MonoBehaviour
     private int itemsCollected;
 
     [SerializeField] GameObject startMinigamePanel;
+    [SerializeField] private Animator cameraHolderAnim;
 
     void Start()
     {
@@ -28,7 +29,6 @@ public class ShieldsUpManager : MonoBehaviour
     }
 
     #region Game Manager
-
     private void GameOver()
     {
         Time.timeScale = 0; //game stops
@@ -63,6 +63,13 @@ public class ShieldsUpManager : MonoBehaviour
         itemsCollected += 10;
 
         collectedDisplay.text = "Score: " + itemsCollected;
+    }
+    #endregion
+
+    #region Public Method
+    public void CameraShake()
+    {
+        cameraHolderAnim.SetTrigger("shake");
     }
     #endregion
 }
