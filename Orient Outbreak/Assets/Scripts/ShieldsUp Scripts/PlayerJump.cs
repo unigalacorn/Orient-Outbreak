@@ -8,7 +8,12 @@ public class PlayerJump : MonoBehaviour
     private Rigidbody2D rb;
     private bool isJumping;
 
+    [SerializeField] private float jumpBufferLength = 0.1f;
+    private float jumpBufferCount;
+
     [SerializeField] private float moveSpeed;
+
+    [SerializeField] private ParticleSystem dustEffect;
 
     // Start is called before the first frame update
     private void Awake()
@@ -19,10 +24,23 @@ public class PlayerJump : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown("space") && !isJumping)
+        //manage jump buffer
+        if (Input.GetKeyDown("space"))
+        {
+            jumpBufferCount = jumpBufferLength;
+        }
+        else
+        {
+            jumpBufferCount -= Time.deltaTime;
+        }
+
+        //jump in the air
+        if (jumpBufferCount >= 0 && !isJumping)
         {
             rb.velocity = new Vector3(0, 20, 0);
             isJumping = true;
+            jumpBufferCount = 0;
+            CreateDust();
         }
 
         if (Input.GetKeyUp("space") && rb.velocity.y > 0)
@@ -40,6 +58,11 @@ public class PlayerJump : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         isJumping = false;
+    }
+
+    void CreateDust()
+    {
+        dustEffect.Play();
     }
 
 }

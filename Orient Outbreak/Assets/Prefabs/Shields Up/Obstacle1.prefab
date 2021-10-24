@@ -123,3 +123,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shieldsUpManager: {fileID: 0}
+  obstacleEffect: {fileID: 1863147140043547242, guid: a61518ca0fcb6b349b6ef947e2e74e10, type: 3}
