@@ -3,16 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauseMenu : MonoBehaviour
+public class MenuManager : MonoBehaviour
 {
+    [SerializeField] GameObject pauseMenuUI;
+    [SerializeField] GameObject GameOverPanel;
+
+    private bool isGameOver = false;
     private static bool GameIsPaused = false;
 
-    [SerializeField] GameObject pauseMenuUI;
+    private void Start()
+    {
+        isGameOver = false;
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !isGameOver)
         {
             if (GameIsPaused)
             {
@@ -57,5 +64,12 @@ public class PauseMenu : MonoBehaviour
     public void QuitMiniGame()
     {
         SceneManager.LoadScene("OverworldScene");
+    }
+
+    public void GameOver()
+    {
+        Time.timeScale = 0; //game stops
+        isGameOver = true;
+        GameOverPanel.SetActive(true);
     }
 }
