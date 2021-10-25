@@ -23,8 +23,6 @@ public class GameManager : MonoBehaviour
     public float cycleMaxTime = 60;
     #endregion
 
-    // Testing
-    [Header("Flags")]
     #region Flags
     public bool hasInteractedWithTestNPC1 = false;
     #endregion
@@ -102,6 +100,17 @@ public class GameManager : MonoBehaviour
         }
 
         return false;
+    }
+
+    public void IncreaseAmount(QuestName questName)
+    {
+        for (int i = 0; i < questList.Count; i++)
+        {
+            if (questList[i].GetQuestName() == questName)
+            {
+                questList[i].IncreaseCurrentAmount();
+            }
+        }
     }
 
     public bool IsQuestFinished(QuestName questName) //Method that finds index of quest name and checks if it is finished

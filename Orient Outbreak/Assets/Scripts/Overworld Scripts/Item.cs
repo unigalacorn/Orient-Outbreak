@@ -29,5 +29,6 @@ public enum ItemName
 {
     Facts,
     LabGown,
-    Fruit
+    Food,
+    Trash
 }

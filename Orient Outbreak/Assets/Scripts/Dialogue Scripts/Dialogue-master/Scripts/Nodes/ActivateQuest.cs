@@ -7,8 +7,6 @@ namespace Dialogue
 {
 	public class ActivateQuest : DialogueBaseNode
 	{
-		//GameManager gm;
-
 		public QuestName questName;
 		public int requiredAmount;
 		private int currentAmount;

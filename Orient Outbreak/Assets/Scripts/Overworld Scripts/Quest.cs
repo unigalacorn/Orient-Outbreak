@@ -27,7 +27,7 @@ public class Quest
 
     public int GetRequiredAmount() => requiredAmount;           //requiredAmount public getter
 
-    public void SetCurrentAmount(int _currentAmount) => currentAmount = _currentAmount;     //currentAmount public setter
+    public void IncreaseCurrentAmount() => currentAmount += 1;     //currentAmount public setter
 
     public bool AreRequirementsMet() => currentAmount == requiredAmount ? true : false;       //check if requirements are met to complete quest
 

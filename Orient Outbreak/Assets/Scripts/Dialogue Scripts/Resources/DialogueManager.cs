@@ -37,7 +37,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(dialogueID);
+        
         if (Input.GetKeyDown("space") | Input.GetMouseButtonDown(0))
         {
             dialogueID++;
