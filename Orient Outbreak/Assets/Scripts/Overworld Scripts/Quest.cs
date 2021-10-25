@@ -7,15 +7,13 @@ public class Quest
 {
     #region Variables and Constructor
     [SerializeField] private QuestName questName;
-    [SerializeField] private string questDescription;
     [SerializeField] private int currentAmount;
     [SerializeField] private int requiredAmount;
     [SerializeField] private bool isQuestCompleted;
 
-    public Quest(QuestName _questName, string _questDescription, int _currentAmount, int _requiredAmount)
+    public Quest(QuestName _questName, int _currentAmount, int _requiredAmount)
     {
         questName = _questName;
-        questDescription = _questDescription;
         currentAmount = _currentAmount;
         requiredAmount = _requiredAmount;
         isQuestCompleted = false;
@@ -25,13 +23,11 @@ public class Quest
     #region Public Getter/Setter
     public QuestName GetQuestName() => questName;               //questName public getter
 
-    public string GetQuestDescription() => questDescription;    //questDescription public getter
-
     public int GetCurrentAmount() => currentAmount;             //currentAmount public getter         
 
     public int GetRequiredAmount() => requiredAmount;           //requiredAmount public getter
 
-    public void SetCurrentAmount(int _currentAmount) => currentAmount = _currentAmount;     //currentAmount public setter
+    public void IncreaseCurrentAmount() => currentAmount += 1;     //currentAmount public setter
 
     public bool AreRequirementsMet() => currentAmount == requiredAmount ? true : false;       //check if requirements are met to complete quest
 

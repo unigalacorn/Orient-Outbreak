@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SideQuestNPC : MonoBehaviour
+public class InteractableItem : MonoBehaviour
 {
     #region Variables
     private bool isPlayerInRange;
-    [Header("Side Quest NPC")]
+    [Header("Item Info")]
+    [SerializeField] private ItemName item;
     [SerializeField] private QuestName sideQuest;
 
     [Header("Dialogue References")]
@@ -26,27 +27,35 @@ public class SideQuestNPC : MonoBehaviour
         {
             GameManager.instance.UpdateGameState(GameState.Dialogue);     //Update Game State to Dialogue
 
-            //Accepting Quest Dialogue
-            if (!GameManager.instance.DoesQuestExist(sideQuest))        
+            //Facts
+            if (item == ItemName.Facts)
             {
-                dialogueManager.StartDialogue(dialogue.dialogueList[0]); 
+                dialogueManager.StartDialogue(dialogue.dialogueList[0]);
+                Destroy(gameObject);  //Destory object once retrieved.
             }
-            //Waiting For Quest Dialogue
-            else if (!GameManager.instance.IsQuestFinished(sideQuest) && !GameManager.instance.AreRequirementsMet(sideQuest))     
+
+            //Lab Gown or Trash
+            else if (item == ItemName.LabGown || item == ItemName.Trash)
             {
-                dialogueManager.StartDialogue(dialogue.dialogueList[1]);
+                // If side quest does not exist unable to retrieve item
+                if (!GameManager.instance.DoesQuestExist(sideQuest))
+                {
+                    dialogueManager.StartDialogue(dialogue.dialogueList[0]);
+                }
+                //If side quest exist lab gown is obtainable
+                else
+                {
+                    dialogueManager.StartDialogue(dialogue.dialogueList[1]);
+
+                    if (item == ItemName.Trash)
+                    {
+                        GameManager.instance.IncreaseAmount(sideQuest);
+                    }
+
+                    Destroy(gameObject);  //Destory object once retrieved.
+                }
             }
-            //Turning In Quest
-            else if (!GameManager.instance.IsQuestFinished(sideQuest) && GameManager.instance.AreRequirementsMet(sideQuest))     //If quest exists and not completed
-            {
-                GameManager.instance.TurnInQuest(sideQuest);
-                dialogueManager.StartDialogue(dialogue.dialogueList[2]);
-            }
-            //Finished Quest
-            else if (GameManager.instance.IsQuestFinished(sideQuest))       
-            {
-                dialogueManager.StartDialogue(dialogue.dialogueList[3]);
-            }
+
         }
     }
     #endregion 
