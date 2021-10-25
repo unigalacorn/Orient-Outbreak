@@ -8,25 +8,27 @@ public class ShieldsUpManager : MonoBehaviour
 {
     [Header ("References")]
     [SerializeField] GameObject GameOverPanel;
-    [SerializeField] private Text healthDisplay;
     [SerializeField] private Text collectedDisplay;
+    [SerializeField] Image lifeFill;
 
     [Header("Player Properties")]
-    private int health;
+    float life = 1f; 
 
     [Header("Score")]
     private int score;
     private int itemsCollected;
 
+    [SerializeField] GameObject startMinigamePanel;
+    [SerializeField] private Animator cameraHolderAnim;
+
     void Start()
     {
-        Time.timeScale = 1; 
-        health = 3;
+        Time.timeScale = 0;
         itemsCollected = 0;
+        startMinigamePanel.SetActive(true);
     }
 
     #region Game Manager
-
     private void GameOver()
     {
         Time.timeScale = 0; //game stops
@@ -34,20 +36,23 @@ public class ShieldsUpManager : MonoBehaviour
 
     }
 
-    public void RestartGame()
+    public void StartMinigame()
     {
-        SceneManager.LoadScene("ShieldsUp");
+        startMinigamePanel.SetActive(false);
+        Time.timeScale = 1f;
     }
     #endregion
 
     #region Health System
-    public void DecreasePlayerHealth()
+    public void DecreasePlayerHealth() //remove hearts
     {
-        health -= 1;
+        if (life > 0f)
+        {
+            life -= 0.2f;
+            lifeFill.fillAmount = life;
+        }
 
-        healthDisplay.text = "Health: " + (health);
-
-        if (health <= 0)
+        if (life <= 0.2f)
             GameOver();
     }
     #endregion
@@ -55,9 +60,16 @@ public class ShieldsUpManager : MonoBehaviour
     #region Score System
     public void CollectItem()
     {
-        itemsCollected += 1;
+        itemsCollected += 10;
 
-        collectedDisplay.text = "Items Collected: " + itemsCollected;
+        collectedDisplay.text = "Score: " + itemsCollected;
+    }
+    #endregion
+
+    #region Public Method
+    public void CameraShake()
+    {
+        cameraHolderAnim.SetTrigger("shake");
     }
     #endregion
 }
