@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class ShieldsUpManager : MonoBehaviour
 {
     [Header ("References")]
-    [SerializeField] GameObject GameOverPanel;
     [SerializeField] private Text collectedDisplay;
     [SerializeField] Image lifeFill;
 
@@ -15,11 +14,11 @@ public class ShieldsUpManager : MonoBehaviour
     float life = 1f; 
 
     [Header("Score")]
-    private int score;
     private int itemsCollected;
 
     [SerializeField] GameObject startMinigamePanel;
     [SerializeField] private Animator cameraHolderAnim;
+    [SerializeField] private MenuManager menuManager;
 
     void Start()
     {
@@ -29,13 +28,6 @@ public class ShieldsUpManager : MonoBehaviour
     }
 
     #region Game Manager
-    private void GameOver()
-    {
-        Time.timeScale = 0; //game stops
-        GameOverPanel.SetActive(true);
-
-    }
-
     public void StartMinigame()
     {
         startMinigamePanel.SetActive(false);
@@ -53,7 +45,7 @@ public class ShieldsUpManager : MonoBehaviour
         }
 
         if (life <= 0.2f)
-            GameOver();
+            menuManager.GameOver();
     }
     #endregion
 
@@ -69,7 +61,13 @@ public class ShieldsUpManager : MonoBehaviour
     #region Public Method
     public void CameraShake()
     {
-        cameraHolderAnim.SetTrigger("shake");
+        //cameraHolderAnim.SetTrigger("shake");
+    }
+
+    public string GetScore()
+    {
+        string score = itemsCollected.ToString();
+        return score;
     }
     #endregion
 }
