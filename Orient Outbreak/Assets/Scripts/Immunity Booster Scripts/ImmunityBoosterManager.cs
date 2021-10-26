@@ -72,6 +72,12 @@ public class ImmunityBoosterManager : MonoBehaviour
     #endregion
 
     #region Public Methods
+
+    public int GetScore()
+    {
+        return scoreCounter;
+    }
+
     public void catchFruit()
     {
         scoreCounter += 50;

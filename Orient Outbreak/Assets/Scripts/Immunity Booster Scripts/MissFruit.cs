@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MissFruit : MonoBehaviour
 {
     [SerializeField] private ImmunityBoosterManager gameManagerScript;
+    [SerializeField] private GameObject finishGamePanel;
+    [SerializeField] private Text scoreText;
+    [SerializeField] private ImmunityBoosterManager minigameManager;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -16,9 +20,8 @@ public class MissFruit : MonoBehaviour
 
         if (collision.CompareTag("End Flag"))
         {
-            //Show minigame score
-            Debug.Log("end game");
-            gameManagerScript.loadOverworldScene(); //temp
+            finishGamePanel.SetActive(true);
+            scoreText.text = "Score: " + minigameManager.GetScore();
         }
     }
 }
