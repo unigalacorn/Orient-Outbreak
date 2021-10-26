@@ -21,8 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if(GameManager.instance.currentState == GameState.Exploration)
-        {
+        if(GameManager.instance.currentState == GameState.Exploration)        {
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
 
