@@ -36,6 +36,9 @@ public class ImmunityBoosterManager : MonoBehaviour
 
         scoreText.text = "SCORE: " + scoreCounter;
         comboText.text = "COMBO: " + comboCounter;
+
+        hasStarted = true;
+        StartCoroutine(StartSoundtrack());
     }
 
     private void Update()
@@ -43,11 +46,6 @@ public class ImmunityBoosterManager : MonoBehaviour
         if (hasStarted)
         {
             fruitHolderTransform.position -= new Vector3(0f, tempo * Time.deltaTime, 0f);
-        }
-        else if (!hasStarted && Input.anyKeyDown)
-        {
-            hasStarted = true;
-            StartCoroutine(StartSoundtrack());
         }
 
         if(Time.timeScale == 0f)
