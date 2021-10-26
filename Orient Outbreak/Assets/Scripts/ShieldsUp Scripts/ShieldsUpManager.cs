@@ -16,7 +16,7 @@ public class ShieldsUpManager : MonoBehaviour
     [Header("Score")]
     private int itemsCollected;
 
-    [SerializeField] GameObject startMinigamePanel;
+    [SerializeField] private GameObject startMinigamePanel;
     [SerializeField] private Animator cameraHolderAnim;
     [SerializeField] private MenuManager menuManager;
 
