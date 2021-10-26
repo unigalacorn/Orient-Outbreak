@@ -88,7 +88,6 @@ public class ImmunityBoosterManager : MonoBehaviour
     public void missFruit()
     {
         comboCounter = 0;
-
         comboText.text = "COMBO: " + comboCounter;
     }
 

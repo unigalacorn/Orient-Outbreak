@@ -12,7 +12,7 @@ public class MissFruit : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Fruit"))
+        if (collision.CompareTag("Shake Fruit"))
         {
             Destroy(collision.gameObject);
             gameManagerScript.missFruit();
