@@ -11,8 +11,11 @@ public class ImmunityBoosterManager : MonoBehaviour
     [SerializeField] private Transform fruitHolderTransform;
     [SerializeField] private float tempo;
     [SerializeField] private Animator cameraHolderAnim;
+    [SerializeField] private GameObject startMinigamePanel;
+    [SerializeField] private MenuManager menuManager;
 
     private bool hasStarted;
+    private bool isPaused;
 
     [Header("Score System")]
     [SerializeField] private Text scoreText;
@@ -24,6 +27,8 @@ public class ImmunityBoosterManager : MonoBehaviour
     #region Unity Methods
     private void Start()
     {
+        startMinigamePanel.SetActive(true);
+
         tempo = tempo / 60f;
 
 
@@ -45,6 +50,17 @@ public class ImmunityBoosterManager : MonoBehaviour
         {
             hasStarted = true;
             StartCoroutine(StartSoundtrack());
+        }
+
+        if(Time.timeScale == 0f)
+        {
+            isPaused = true;
+            soundtrack.Pause();
+        }
+        else if(Time.timeScale == 1f && isPaused)
+        {
+            isPaused = false;
+            soundtrack.UnPause();
         }
     }
     #endregion
@@ -83,6 +99,12 @@ public class ImmunityBoosterManager : MonoBehaviour
     {
         GameManager.instance.UpdateGameState(GameState.Exploration);
         SceneManager.LoadScene("Overworld Scene");
+    }
+
+    public void StartMinigame()
+    {
+        startMinigamePanel.SetActive(false);
+        Time.timeScale = 1f;
     }
     #endregion
 }

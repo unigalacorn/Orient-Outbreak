@@ -9,7 +9,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] GameObject GameOverPanel;
 
     private bool isGameOver = false;
-    private static bool GameIsPaused = false;
+    private static bool gameIsPaused = false;
 
     private void Start()
     {
@@ -21,7 +21,7 @@ public class MenuManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape) && !isGameOver)
         {
-            if (GameIsPaused)
+            if (gameIsPaused)
             {
                 Resume();
             }
@@ -36,19 +36,19 @@ public class MenuManager : MonoBehaviour
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
-        GameIsPaused = false;
+        gameIsPaused = false;
     }
 
     void Pause()
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
-        GameIsPaused = true;
+        gameIsPaused = true;
     }
 
     public void Retry()
     {
-        SceneManager.LoadScene("ShieldsUp");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void HowToPlay()
