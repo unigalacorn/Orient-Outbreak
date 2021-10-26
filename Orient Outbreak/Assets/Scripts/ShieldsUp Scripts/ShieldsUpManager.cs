@@ -16,24 +16,14 @@ public class ShieldsUpManager : MonoBehaviour
     [Header("Score")]
     private int itemsCollected;
 
-    [SerializeField] GameObject startMinigamePanel;
     [SerializeField] private Animator cameraHolderAnim;
     [SerializeField] private MenuManager menuManager;
 
     void Start()
     {
-        Time.timeScale = 0;
-        itemsCollected = 0;
-        startMinigamePanel.SetActive(true);
-    }
-
-    #region Game Manager
-    public void StartMinigame()
-    {
-        startMinigamePanel.SetActive(false);
         Time.timeScale = 1f;
+        itemsCollected = 0;
     }
-    #endregion
 
     #region Health System
     public void DecreasePlayerHealth() //remove hearts

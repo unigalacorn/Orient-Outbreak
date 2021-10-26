@@ -19163,11 +19163,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectedDisplay: {fileID: 1729156377}
   lifeFill: {fileID: 1624070069}
-  startMinigamePanel: {fileID: 1433887721}
   cameraHolderAnim: {fileID: 660363509}
   menuManager: {fileID: 988581598}
-  finishGamePanel: {fileID: 1402952690}
-  finalScore: {fileID: 51101797}
 --- !u!4 &1371672475
 Transform:
   m_ObjectHideFlags: 0
@@ -21742,6 +21739,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28bc6f1d959e6574db88b53467cf83a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shieldsUpManager: {fileID: 0}
+  finishGamePanel: {fileID: 0}
+  finalScore: {fileID: 0}
 --- !u!1 &1624070066
 GameObject:
   m_ObjectHideFlags: 0
@@ -23031,7 +23031,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -23039,7 +23039,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 638ecd2fd46457c439e0cb4b25e25ff3, type: 3}
     m_FontSize: 50
     m_FontStyle: 1
     m_BestFit: 0
