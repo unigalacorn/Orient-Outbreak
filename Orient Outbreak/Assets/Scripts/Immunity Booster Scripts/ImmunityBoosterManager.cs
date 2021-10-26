@@ -27,8 +27,6 @@ public class ImmunityBoosterManager : MonoBehaviour
     #region Unity Methods
     private void Start()
     {
-        startMinigamePanel.SetActive(true);
-
         tempo = tempo / 60f;
 
 
