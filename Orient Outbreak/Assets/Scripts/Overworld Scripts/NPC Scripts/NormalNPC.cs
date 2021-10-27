@@ -21,7 +21,7 @@ public class NormalNPC : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyUp("space") && isPlayerInRange && GameManager.instance.currentState != GameState.Dialogue)
+        if (Input.GetKeyDown("space") && isPlayerInRange && GameManager.instance.currentState != GameState.Dialogue)
         {
             //Start Dialogue
             GameManager.instance.UpdateGameState(GameState.Dialogue);     //Update Game State to Dialogue

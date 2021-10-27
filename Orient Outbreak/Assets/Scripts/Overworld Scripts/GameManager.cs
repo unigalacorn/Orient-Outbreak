@@ -12,19 +12,23 @@ public class GameManager : MonoBehaviour
 
     [Header("Main Quest Flags")]
     //Immunity Booster
-    [SerializeField] public bool isImmunityBoosterDone = false;
-    [SerializeField] public bool isImmunityBoosterSuccess = false;
-    [SerializeField] public bool isImmunityBoosterFailed = false;
-
+    public bool isImmunityBoosterDone = false;
+    public bool isImmunityBoosterSuccess = false;
+    public bool isImmunityBoosterFailed = false;
+    [Space]
     //Shields Up
-    [SerializeField] public bool isShieldsUpDone = false;
-    [SerializeField] public bool isShieldsUpSuccess = false;
-    [SerializeField] public bool isShieldsUpFailed = false;
-
+    public bool isShieldsUpDone = false;
+    public bool isShieldsUpSuccess = false;
+    public bool isShieldsUpFailed = false;
+    [Space]
     //WerkIt
-    [SerializeField] public bool isWerkItDone = false;
-    [SerializeField] public bool isWerkItSuccess = false;
-    [SerializeField] public bool isWerkItFailed = false;
+    public bool isWerkItDone = false;
+    public bool isWerkItSuccess = false;
+    public bool isWerkItFailed = false;
+    [Space]
+    //Deliver food
+    public bool isFoodGiven = false;
+
 
     [Header("Player")]
     [Space]
@@ -56,11 +60,12 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        UpdateGameState(GameState.Exploration);     //Temp
     }
 
     private void Start()
     {
-        UpdateGameState(GameState.Exploration);     //Temp
         day = 1;       //temp
         SetDayCycle((int)DayCycles.Morning); // start with sunrise state
     }
