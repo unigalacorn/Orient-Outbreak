@@ -288,8 +288,8 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   character: {fileID: 11400000, guid: 4fbc6744af97b4743893c2edbb661458, type: 2}
-  text: '(Josie looks closer at Jose''s lab coat and realized the lab coat looks
-    old and was indeed not hers)
+  text: '*Josie looks closer at Jose''s lab coat and realized the lab coat looks
+    old and was indeed not hers*
 
 '
   answers: []
@@ -929,7 +929,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   character: {fileID: 11400000, guid: 4fbc6744af97b4743893c2edbb661458, type: 2}
-  text: 'Umm ... I went to the park the other day. But I can''t go there now because
+  text: 'Umm ... I went to the forest the other day. But I can''t go there now because
     I have to return to the hospital soon for my shift.
 
 

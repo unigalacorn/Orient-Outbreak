@@ -54,7 +54,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   character: {fileID: 11400000, guid: 4fbc6744af97b4743893c2edbb661458, type: 2}
-  text: 'Maybe try looking for it in the park.
+  text: 'Maybe try looking for it in the forest.
 
 '
   answers: []

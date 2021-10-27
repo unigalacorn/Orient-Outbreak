@@ -57,7 +57,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   character: {fileID: 11400000, guid: 89733cd8ccd19284f80a50305c266aae, type: 2}
-  text: "(Jose hands over the lost lab coat\r)\n"
+  text: "*Jose hands over the lost lab coat\r*\n"
   answers: []
 --- !u!114 &11400000
 MonoBehaviour:

@@ -45,10 +45,10 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 2277580196279685673}
+        node: {fileID: 115569215124999882}
         reroutePoints: []
       - fieldName: input
-        node: {fileID: 115569215124999882}
+        node: {fileID: 6281263714161225025}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -57,8 +57,8 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   character: {fileID: 11400000, guid: 89733cd8ccd19284f80a50305c266aae, type: 2}
-  text: (Jose finds one of the lost pages of his notebook and reads what's written
-    on it)
+  text: '*Jose finds one of the lost pages of his notebook and reads what''s written
+    on it*'
   answers: []
 --- !u!114 &11400000
 MonoBehaviour:
@@ -74,9 +74,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: -6313792348321226958}
-  - {fileID: 2277580196279685673}
   - {fileID: 115569215124999882}
-  current: {fileID: 2277580196279685673}
+  - {fileID: 6281263714161225025}
+  current: {fileID: -6313792348321226958}
 --- !u!114 &115569215124999882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,7 +121,7 @@ MonoBehaviour:
   output: {fileID: 0}
   item: 0
   sideQuest: 1
---- !u!114 &2277580196279685673
+--- !u!114 &6281263714161225025
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,29 +130,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
-  m_Name: Chat
+  m_Script: {fileID: 11500000, guid: be1c5e3eaf9d2414bb13bf8e93b9e2be, type: 3}
+  m_Name: Instantiate Fact
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -24, y: -104}
+  position: {x: 24, y: -152}
   ports:
     keys:
-    - answers
     - input
     - output
     values:
-    - _fieldName: answers
-      _node: {fileID: 2277580196279685673}
-      _typeQualifiedName: System.Collections.Generic.List`1[[Dialogue.Chat+Answer,
-        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
     - _fieldName: input
-      _node: {fileID: 2277580196279685673}
+      _node: {fileID: 6281263714161225025}
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
@@ -164,7 +153,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
     - _fieldName: output
-      _node: {fileID: 2277580196279685673}
+      _node: {fileID: 6281263714161225025}
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections: []
@@ -174,6 +163,9 @@ MonoBehaviour:
       _dynamic: 0
   input: {fileID: 0}
   output: {fileID: 0}
-  character: {fileID: 11400000, guid: 89733cd8ccd19284f80a50305c266aae, type: 2}
-  text: insert fact
-  answers: []
+  tornPaper: {fileID: 4957255036142505268, guid: 9ab838426e4c7d648b2e56d600c5307c, type: 3}
+  factText: 'Exposing yourself to the sun or to temperatures higher than 25C degrees
+    DOES NOT prevent the coronavirus disease (COVID-19). You can catch COVID-19,
+    no matter how sunny or hot the weather is. Countries with hot weather have reported
+    cases of COVID-19. To protect yourself make sure you clean your hands frequently
+    and thoroughly avoid touching your eyes, mouth and nose. '

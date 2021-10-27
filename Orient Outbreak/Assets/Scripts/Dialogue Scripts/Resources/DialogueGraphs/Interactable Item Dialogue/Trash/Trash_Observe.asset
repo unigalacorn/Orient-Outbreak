@@ -51,7 +51,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   character: {fileID: 11400000, guid: 89733cd8ccd19284f80a50305c266aae, type: 2}
-  text: (Jose notices that there is trash on the floor)
+  text: '*Jose notices that there is trash on the floor*'
   answers: []
 --- !u!114 &11400000
 MonoBehaviour:

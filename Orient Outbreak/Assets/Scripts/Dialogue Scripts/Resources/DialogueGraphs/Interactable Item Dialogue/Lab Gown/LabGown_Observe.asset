@@ -127,7 +127,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   character: {fileID: 11400000, guid: 89733cd8ccd19284f80a50305c266aae, type: 2}
-  text: (Jose notices a lab gown on the ground)
+  text: '*Jose notices a lab gown on the ground*'
   answers: []
 --- !u!114 &6362060630084307601
 MonoBehaviour:

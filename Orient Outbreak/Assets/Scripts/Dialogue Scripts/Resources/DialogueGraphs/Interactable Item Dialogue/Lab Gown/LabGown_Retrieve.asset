@@ -135,7 +135,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   character: {fileID: 11400000, guid: 89733cd8ccd19284f80a50305c266aae, type: 2}
-  text: (Jose notices a lab gown on the ground)
+  text: '*Jose notices a lab gown on the ground*'
   answers: []
 --- !u!114 &6886927018298901533
 MonoBehaviour:
@@ -191,7 +191,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   character: {fileID: 11400000, guid: 89733cd8ccd19284f80a50305c266aae, type: 2}
-  text: (Jose retrieves the lost lab gown)
+  text: '*Jose retrieves the lost lab gown*'
   answers: []
 --- !u!114 &7573974033355092567
 MonoBehaviour:

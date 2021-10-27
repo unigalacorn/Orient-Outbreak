@@ -722,7 +722,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   character: {fileID: 11400000, guid: 89733cd8ccd19284f80a50305c266aae, type: 2}
-  text: (Jose walks away)
+  text: '*Jose walks away*'
   answers: []
 --- !u!114 &4604517683915138837
 MonoBehaviour:
@@ -781,8 +781,8 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   character: {fileID: 11400000, guid: e004c07e9a16bd642bd66bebd7285fe4, type: 2}
-  text: "Thanks so much! You can find Agnes by our karinderya in <insert place>.
-    It\u2019s hard to miss."
+  text: "Thanks so much! You can find Agnes by our karinderya in Park. It\u2019s
+    hard to miss."
   answers: []
 --- !u!114 &5089170245796055591
 MonoBehaviour:
