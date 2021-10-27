@@ -10,6 +10,22 @@ public class GameManager : MonoBehaviour
     [Header("Game State")]
     public GameState currentState;
 
+    [Header("Main Quest Flags")]
+    //Immunity Booster
+    [SerializeField] public bool isImmunityBoosterDone = false;
+    [SerializeField] public bool isImmunityBoosterSuccess = false;
+    [SerializeField] public bool isImmunityBoosterFailed = false;
+
+    //Shields Up
+    [SerializeField] public bool isShieldsUpDone = false;
+    [SerializeField] public bool isShieldsUpSuccess = false;
+    [SerializeField] public bool isShieldsUpFailed = false;
+
+    //WerkIt
+    [SerializeField] public bool isWerkItDone = false;
+    [SerializeField] public bool isWerkItSuccess = false;
+    [SerializeField] public bool isWerkItFailed = false;
+
     [Header("Player")]
     [Space]
     [SerializeField] private SpriteRenderer playerSprite;
@@ -188,4 +204,11 @@ public enum GameState
     Exploration,
     Minigame,
     Victory
+}
+
+public enum Minigame
+{
+    ImmunityBooster,
+    ShieldsUp,
+    WerkIt
 }
