@@ -9,6 +9,7 @@ TagManager:
   - Light
   - Collectable
   - Obstacle
+  - Shake Fruit
   layers:
   - Default
   - TransparentFX
@@ -57,6 +58,9 @@ TagManager:
     locked: 0
   - name: Minigame Background
     uniqueID: 1196095023
+    locked: 0
+  - name: Glow
+    uniqueID: 3866903319
     locked: 0
   - name: Minigame Foreground
     uniqueID: 2506680913

@@ -5,17 +5,33 @@ using UnityEngine;
 public class CatchFruit : MonoBehaviour
 {
     [SerializeField] private Animator characterHolder;
-    [SerializeField] private ImmunityBoosterManager gameManagerScript;
+    [SerializeField] private ImmunityBoosterManager immunityBoosterManager;
+    [SerializeField] private ParticleSystem fruitBurst;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Fruit"))
         {
-            characterHolder.SetTrigger("stopSquash");
-            characterHolder.SetTrigger("squashPlayer");
+            PlayerCatchFruit();
             Destroy(collision.gameObject);
+            Instantiate(fruitBurst, collision.gameObject.transform.position, Quaternion.identity);
 
-            gameManagerScript.catchFruit();
         }
+
+        if (collision.CompareTag("Shake Fruit"))
+        {
+            immunityBoosterManager.CameraShake();
+
+            PlayerCatchFruit();
+            Destroy(collision.gameObject);
+            Instantiate(fruitBurst, collision.gameObject.transform.position, Quaternion.identity);
+        }
+    }
+
+    private void PlayerCatchFruit()
+    {
+        characterHolder.SetTrigger("stopSquash");
+        characterHolder.SetTrigger("squashPlayer");
+        immunityBoosterManager.catchFruit();
     }
 }

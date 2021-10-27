@@ -13,6 +13,7 @@ public class DialogueManager : MonoBehaviour
     int prev;       // used to check if current node is last node
     bool dialogueStarted;
     bool isReadyForNext;
+    int dialogueID; // to solve getkey problem
 
     [Header("Dialogue UI")]
     public GameObject DialogueUI;
@@ -36,11 +37,19 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        //Debug.Log(isReadyForNext);
-        if(dialogueStarted && isReadyForNext && Input.GetKeyDown("space") | Input.GetMouseButtonUp(0))
+        
+        if (Input.GetKeyDown("space") | Input.GetMouseButtonDown(0))
         {
-            isReadyForNext = false;
-            NextNode(0);
+            dialogueID++;
+        }
+
+        if(Input.GetKeyDown("space") | Input.GetMouseButtonDown(0) && dialogueStarted && isReadyForNext)
+        {
+            if(dialogueID != 1)
+            {
+                isReadyForNext = false;
+                NextNode(0);
+            }
         }
     }
     #endregion
@@ -53,6 +62,7 @@ public class DialogueManager : MonoBehaviour
         selectedGraph = graph;
         selectedGraph.Restart();
         prev = -1;
+        dialogueID = 0;
 
         dialogueStarted = true;
         isReadyForNext = false;
@@ -69,15 +79,25 @@ public class DialogueManager : MonoBehaviour
     private void ParseNode()
     {
         //Debug.Log(prev);
-        
+
         // Sets info for dialogue UI elements
-        charNameUI.text = selectedGraph.current.character.charName;
-        charTitleUI.text = selectedGraph.current.character.charTitle;
-        dialogueLineUI.text = selectedGraph.current.text;
-        charSpriteUI.sprite = selectedGraph.current.character.dialogueSprite;
+        // If null character reference, the current node is skipped
+        try
+        {
+            charNameUI.text = selectedGraph.current.character.charName;
+            charTitleUI.text = selectedGraph.current.character.charTitle;
+            dialogueLineUI.text = selectedGraph.current.text;
+            charSpriteUI.sprite = selectedGraph.current.character.dialogueSprite;
+        }
+        catch
+        {
+            isReadyForNext = false;
+            NextNode(0);
+            return;
+        }
 
         // Changes display if current speaker is Jose or not
-        if(charNameUI.text == "Jose")
+        if (charNameUI.text == "Jose")
         {
             charSpriteUI.gameObject.transform.localPosition = new Vector3(-466, -147, 0);
             dialogueContainer.localPosition = new Vector2(200, -95);
@@ -131,19 +151,21 @@ public class DialogueManager : MonoBehaviour
         //    _parser = null;
         //}
 
+
+        prev = selectedGraph.current.GetInstanceID();
+
         // traverses to next chat node, and triggers any connected activate quest and minigame node
         selectedGraph.AnswerQuestion(index);
 
-        // If reached last consecutive chat node
+        // If reached last consecutive chat node, else parse node
         if (prev == selectedGraph.current.GetInstanceID())
         {
             LastNode();
         }
-
-        prev = selectedGraph.current.GetInstanceID();
-
-        //_parser = StartCoroutine(ParseNode());
-        ParseNode();
+        else
+        {
+            ParseNode();
+        }
     }
 
     // Inactivate Dialogue UI objects

@@ -10,7 +10,12 @@ public class ImmunityBoosterManager : MonoBehaviour
     [SerializeField] private AudioSource soundtrack;
     [SerializeField] private Transform fruitHolderTransform;
     [SerializeField] private float tempo;
+    [SerializeField] private Animator cameraHolderAnim;
+    [SerializeField] private GameObject startMinigamePanel;
+    [SerializeField] private MenuManager menuManager;
+
     private bool hasStarted;
+    private bool isPaused;
 
     [Header("Score System")]
     [SerializeField] private Text scoreText;
@@ -31,6 +36,9 @@ public class ImmunityBoosterManager : MonoBehaviour
 
         scoreText.text = "SCORE: " + scoreCounter;
         comboText.text = "COMBO: " + comboCounter;
+
+        hasStarted = true;
+        StartCoroutine(StartSoundtrack());
     }
 
     private void Update()
@@ -39,10 +47,16 @@ public class ImmunityBoosterManager : MonoBehaviour
         {
             fruitHolderTransform.position -= new Vector3(0f, tempo * Time.deltaTime, 0f);
         }
-        else if (!hasStarted && Input.anyKeyDown)
+
+        if(Time.timeScale == 0f)
         {
-            hasStarted = true;
-            StartCoroutine(StartSoundtrack());
+            isPaused = true;
+            soundtrack.Pause();
+        }
+        else if(Time.timeScale == 1f && isPaused)
+        {
+            isPaused = false;
+            soundtrack.UnPause();
         }
     }
     #endregion
@@ -50,12 +64,18 @@ public class ImmunityBoosterManager : MonoBehaviour
     #region Coroutines
     IEnumerator StartSoundtrack()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(1f);
         soundtrack.Play();
     }
     #endregion
 
     #region Public Methods
+
+    public int GetScore()
+    {
+        return scoreCounter;
+    }
+
     public void catchFruit()
     {
         scoreCounter += 50;
@@ -68,14 +88,24 @@ public class ImmunityBoosterManager : MonoBehaviour
     public void missFruit()
     {
         comboCounter = 0;
-
         comboText.text = "COMBO: " + comboCounter;
+    }
+
+    public void CameraShake()
+    {
+        cameraHolderAnim.SetTrigger("shake");
     }
 
     public void loadOverworldScene()
     {
         GameManager.instance.UpdateGameState(GameState.Exploration);
         SceneManager.LoadScene("Overworld Scene");
+    }
+
+    public void StartMinigame()
+    {
+        startMinigamePanel.SetActive(false);
+        Time.timeScale = 1f;
     }
     #endregion
 }
