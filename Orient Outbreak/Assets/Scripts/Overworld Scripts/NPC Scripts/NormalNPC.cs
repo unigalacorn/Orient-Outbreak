@@ -33,7 +33,7 @@ public class NormalNPC : MonoBehaviour
     #region On Collision Methods
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player" && GameManager.instance.currentState == GameState.Exploration)
+        if (collision.gameObject.name == "Player" && GameManager.instance.currentState == GameState.Exploration)
         {
             isPlayerInRange = true;
         }
@@ -41,7 +41,7 @@ public class NormalNPC : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player" && GameManager.instance.currentState == GameState.Exploration)
+        if (collision.gameObject.name == "Player" && GameManager.instance.currentState == GameState.Exploration)
         {
             isPlayerInRange = false;
         }
