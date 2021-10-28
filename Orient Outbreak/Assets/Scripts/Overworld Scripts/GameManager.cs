@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Player")]
     [Space]
-    [SerializeField] private SpriteRenderer playerSprite;
+    [SerializeField] private Animator playerAnim;
     public List<Quest> questList = new List<Quest>();
     public List<Item> inventory = new List<Item>();
 
@@ -83,6 +83,7 @@ public class GameManager : MonoBehaviour
                 case GameState.Cutscene:
                     break;
                 case GameState.Dialogue:
+                    playerAnim.SetFloat("Speed", 0);
                     break;
                 case GameState.Exploration:
                     break;

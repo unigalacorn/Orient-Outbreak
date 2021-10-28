@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Jose
   charTitle: The time Traveller
-  dialogueSprite: {fileID: 21300000, guid: 41525ed3202db2d43aa24d8cc0dba69f, type: 3}
+  dialogueSprite: {fileID: 21300000, guid: 54ec65ca84e1d6d4780185e44b79b362, type: 3}
   color: {r: 0.504717, g: 0.6449343, b: 1, a: 1}

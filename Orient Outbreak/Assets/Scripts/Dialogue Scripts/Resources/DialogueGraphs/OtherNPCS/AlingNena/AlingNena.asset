@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Aling Nena
   charTitle: Tindahan Owner
-  dialogueSprite: {fileID: 0}
+  dialogueSprite: {fileID: 21300000, guid: 7387dfdd13b63e343835d70543fa1648, type: 3}
   color: {r: 0, g: 0, b: 0, a: 0}

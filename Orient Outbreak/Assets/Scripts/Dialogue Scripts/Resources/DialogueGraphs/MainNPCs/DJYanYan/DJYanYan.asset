@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: DJ YanYan
   charTitle: Musician
-  dialogueSprite: {fileID: 0}
+  dialogueSprite: {fileID: 21300000, guid: c4818feaaaff88e468416e2976701bfb, type: 3}
   color: {r: 0, g: 0, b: 0, a: 0}

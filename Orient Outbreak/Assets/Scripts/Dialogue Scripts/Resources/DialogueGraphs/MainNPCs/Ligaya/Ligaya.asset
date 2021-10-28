@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Ligaya
   charTitle: Community Pantry Owner
-  dialogueSprite: {fileID: 0}
+  dialogueSprite: {fileID: 21300000, guid: e924b0daf76ffa24f82ea6d251e31428, type: 3}
   color: {r: 0, g: 0, b: 0, a: 0}
