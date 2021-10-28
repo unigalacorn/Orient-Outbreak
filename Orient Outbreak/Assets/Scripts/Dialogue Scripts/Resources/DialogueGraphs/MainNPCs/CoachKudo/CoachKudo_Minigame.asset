@@ -1,5 +1,48 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8238303626317285887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd464bcf1eddbd74395e3f36fdfdde7b, type: 3}
+  m_Name: Instantiate Panel
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3608, y: -40}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -8238303626317285887}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 1
+        node: {fileID: -3602919252869356173}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -8238303626317285887}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  panel: {fileID: 7785217443499794639, guid: 4db3b987ac4cfe84e86310bddc69361e, type: 3}
 --- !u!114 &-6770287948742250084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,7 +168,10 @@ MonoBehaviour:
       _node: {fileID: -3602919252869356173}
       _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: input
+        node: {fileID: -8238303626317285887}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -280,7 +326,8 @@ MonoBehaviour:
   - {fileID: 248129099333522122}
   - {fileID: 7264563183002080688}
   - {fileID: -3602919252869356173}
-  current: {fileID: 0}
+  - {fileID: -8238303626317285887}
+  current: {fileID: -3602919252869356173}
 --- !u!114 &248129099333522122
 MonoBehaviour:
   m_ObjectHideFlags: 0
