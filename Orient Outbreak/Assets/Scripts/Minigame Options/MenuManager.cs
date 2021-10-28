@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
+    [SerializeField] private Minigame minigame;
     [SerializeField] GameObject pauseMenuUI;
     [SerializeField] GameObject GameOverPanel;
 
@@ -64,7 +65,43 @@ public class MenuManager : MonoBehaviour
 
     public void QuitMiniGame()
     {
-        SceneManager.LoadScene("OverworldScene");
+        if (minigame == Minigame.ImmunityBooster)
+        {
+            GameManager.instance.isImmunityBoosterFailed = true;
+        }
+        else if (minigame == Minigame.ShieldsUp)
+        {
+            GameManager.instance.isShieldsUpFailed = true;
+        }
+        else if (minigame == Minigame.WerkIt)
+        {
+            GameManager.instance.isWerkItFailed = true;
+        }
+
+        GameManager.instance.UpdateGameState(GameState.Exploration);
+        SceneLoader.instance.ChangeScene("Overworld Scene");
+        Time.timeScale = 1f;
+    }
+
+    public void MinigameSuccessReturn()
+    {
+        if (minigame == Minigame.ImmunityBooster)
+        {
+            GameManager.instance.isImmunityBoosterSuccess = true;
+        }
+        else if (minigame == Minigame.ShieldsUp)
+        {
+            GameManager.instance.isShieldsUpSuccess = true;
+        }
+        else if (minigame == Minigame.WerkIt)
+        {
+            GameManager.instance.isWerkItSuccess = true;
+        }
+
+
+        GameManager.instance.UpdateGameState(GameState.Exploration);
+        SceneLoader.instance.ChangeScene("Overworld Scene");
+        Time.timeScale = 1f;
     }
 
     public void GameOver()

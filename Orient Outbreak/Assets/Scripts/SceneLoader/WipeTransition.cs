@@ -9,6 +9,6 @@ public class WipeTransition : MonoBehaviour
 
     public void OnWipe_Start()
     {
-        SceneLoader.instance.ActivateCanvas();
+        //SceneLoader.instance.ActivateCanvas();
     }
 }

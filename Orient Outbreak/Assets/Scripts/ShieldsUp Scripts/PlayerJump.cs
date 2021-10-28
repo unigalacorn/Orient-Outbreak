@@ -8,6 +8,8 @@ public class PlayerJump : MonoBehaviour
     private Rigidbody2D rb;
     private bool isJumping;
 
+    [SerializeField] private Animator animator;
+
     [SerializeField] private float jumpBufferLength = 0.1f;
     private float jumpBufferCount;
 
@@ -39,6 +41,7 @@ public class PlayerJump : MonoBehaviour
         {
             rb.velocity = new Vector3(0, 20, 0);
             isJumping = true;
+            animator.SetBool("isJump", true);
             jumpBufferCount = 0;
             CreateDust();
         }
@@ -58,6 +61,7 @@ public class PlayerJump : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         isJumping = false;
+        animator.SetBool("isJump",false);
     }
 
     void CreateDust()

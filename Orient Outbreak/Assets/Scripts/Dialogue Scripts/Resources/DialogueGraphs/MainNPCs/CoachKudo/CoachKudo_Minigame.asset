@@ -135,8 +135,8 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: d0259d4cad8891c4da8c294cb205859f, type: 2}
   text: Only then will I return your cooler, my guy. So what do you say?
   answers:
-  - text: Fine
   - text: "I\u2019ll come back later"
+  - text: Fine
 --- !u!114 &-3196130502113729990
 MonoBehaviour:
   m_ObjectHideFlags: 0

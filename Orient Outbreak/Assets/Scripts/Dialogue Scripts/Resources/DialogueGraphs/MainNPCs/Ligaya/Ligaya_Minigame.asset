@@ -60,6 +60,49 @@ MonoBehaviour:
   text: "I\u2019ve been looking for lost my cooler and I\u2019m sure that\u2019s
     mine. Can I get it back?"
   answers: []
+--- !u!114 &-7478776676258658121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd464bcf1eddbd74395e3f36fdfdde7b, type: 3}
+  m_Name: Instantiate Panel
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3032, y: -296}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -7478776676258658121}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -1781865063605727844}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -7478776676258658121}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  panel: {fileID: 425570465700573862, guid: 14fba10e75de56147b34c81749134e66, type: 3}
 --- !u!114 &-6713282323237149467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,7 +198,7 @@ MonoBehaviour:
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: answers 1
+      - fieldName: answers 0
         node: {fileID: 556567371709826798}
         reroutePoints: []
       _direction: 0
@@ -387,7 +430,7 @@ MonoBehaviour:
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: answers 0
+      - fieldName: answers 1
         node: {fileID: 556567371709826798}
         reroutePoints: []
       _direction: 0
@@ -398,7 +441,10 @@ MonoBehaviour:
       _node: {fileID: -1781865063605727844}
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: input
+        node: {fileID: -7478776676258658121}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -552,6 +598,7 @@ MonoBehaviour:
   - {fileID: 556567371709826798}
   - {fileID: -1781865063605727844}
   - {fileID: -6509368589366796177}
+  - {fileID: -7478776676258658121}
   current: {fileID: 0}
 --- !u!114 &556567371709826798
 MonoBehaviour:
@@ -612,7 +659,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -1781865063605727844}
+        node: {fileID: -6509368589366796177}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -624,7 +671,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -6509368589366796177}
+        node: {fileID: -1781865063605727844}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -635,8 +682,8 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: 10a5d58d4ea34db4dacfc9eadac0e37a, type: 2}
   text: Is it okay if you get some for me?
   answers:
-  - text: Sure thing!
   - text: No, I cant.
+  - text: Sure thing!
 --- !u!114 &8129698865472788948
 MonoBehaviour:
   m_ObjectHideFlags: 0

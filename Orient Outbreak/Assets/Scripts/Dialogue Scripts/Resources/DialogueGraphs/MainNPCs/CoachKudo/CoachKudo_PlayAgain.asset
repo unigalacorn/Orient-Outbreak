@@ -86,7 +86,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   character: {fileID: 11400000, guid: d0259d4cad8891c4da8c294cb205859f, type: 2}
-  text: Are you ready for the exercise of a lifetime, my guy?
+  text: Are you ready for another exercise of a lifetime, my guy?
   answers:
-  - text: " Let\u2019s do this"
   - text: Maybe later
+  - text: " Let\u2019s do this"

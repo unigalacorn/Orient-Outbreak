@@ -121,7 +121,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 8635588139624492092}
+        node: {fileID: -3736074339408605472}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -133,7 +133,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -3736074339408605472}
+        node: {fileID: 8635588139624492092}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -145,8 +145,8 @@ MonoBehaviour:
   text: "To catch the fruits you must DANCE!! \r\nWith my beat, do you even stand
     a chance?!!\r"
   answers:
-  - text: '*Sigh ... fine I guess'
   - text: Hell naw
+  - text: '*Sigh ... fine I guess'
 --- !u!114 &-4330322930547603142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,7 +300,7 @@ MonoBehaviour:
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: answers 1
+      - fieldName: answers 0
         node: {fileID: -4892435566821724083}
         reroutePoints: []
       _direction: 0
@@ -843,7 +843,7 @@ MonoBehaviour:
       - fieldName: output
         node: {fileID: -4892435566821724083}
         reroutePoints: []
-      - fieldName: answers 0
+      - fieldName: answers 1
         node: {fileID: -4892435566821724083}
         reroutePoints: []
       _direction: 0

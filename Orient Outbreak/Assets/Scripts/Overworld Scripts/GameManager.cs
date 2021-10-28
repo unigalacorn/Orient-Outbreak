@@ -85,16 +85,16 @@ public class GameManager : MonoBehaviour
                 case GameState.Dialogue:
                     break;
                 case GameState.Exploration:
-                    playerSprite.enabled = true;
                     break;
                 case GameState.Minigame:
-                    playerSprite.enabled = false;
                     break;
                 case GameState.Victory:
                     //Insert Victory Screen
                     break;
             }
         }
+
+        Debug.Log(newState);
     }
     #endregion
 
