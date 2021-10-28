@@ -7,6 +7,6 @@ public class MainMenuManager : MonoBehaviour
 {
     public void OnStartButtonClicked()
     {
-        SceneManager.LoadScene("Overworld Scene");
+        SceneLoader.instance.ChangeScene("Overworld Scene");
     }
 }

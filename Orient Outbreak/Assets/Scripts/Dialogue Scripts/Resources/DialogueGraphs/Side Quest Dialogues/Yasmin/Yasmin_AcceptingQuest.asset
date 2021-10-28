@@ -141,7 +141,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   character: {fileID: 11400000, guid: e004c07e9a16bd642bd66bebd7285fe4, type: 2}
-  text: "Yeah, thanks. I hope she\u2019ll feel better soon."
+  text: "Yeah, thanks. I hope he\u2019ll feel better soon."
   answers: []
 --- !u!114 &-7125179332149262573
 MonoBehaviour:
@@ -377,8 +377,8 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   character: {fileID: 11400000, guid: e004c07e9a16bd642bd66bebd7285fe4, type: 2}
-  text: "Not really. My sister was supposed to bring adobong pusit for me and my
-    Lolo, but her migraine got worse. She\u2019s having a hard time leaving our house."
+  text: "Not really. My brother was supposed to bring adobong pusit for me and my
+    Lolo, but his migraine got worse. He\u2019s having a hard time leaving our house."
   answers: []
 --- !u!114 &-1893817445381171177
 MonoBehaviour:
@@ -578,7 +578,7 @@ MonoBehaviour:
   output: {fileID: 0}
   character: {fileID: 11400000, guid: e004c07e9a16bd642bd66bebd7285fe4, type: 2}
   text: "Lolo Ganbu had Covid recently and just got his taste back. We wanted to
-    surprise him since my sister Agnes\u2019 adobong pusit is his favorite. \n"
+    surprise him since my brother Jome\u2019 adobong pusit is his favorite. \n"
   answers: []
 --- !u!114 &11400000
 MonoBehaviour:
@@ -608,7 +608,7 @@ MonoBehaviour:
   - {fileID: 7247040428393071594}
   - {fileID: -5757644229021922936}
   - {fileID: -7493571290048989856}
-  current: {fileID: 1406888904665174624}
+  current: {fileID: 7247040428393071594}
 --- !u!114 &422423903681135118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -781,7 +781,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   character: {fileID: 11400000, guid: e004c07e9a16bd642bd66bebd7285fe4, type: 2}
-  text: "Thanks so much! You can find Agnes by our karinderya in Park. It\u2019s
+  text: "Thanks so much! You can find Rustin Jome by our karinderya in Park. It\u2019s
     hard to miss."
   answers: []
 --- !u!114 &5089170245796055591

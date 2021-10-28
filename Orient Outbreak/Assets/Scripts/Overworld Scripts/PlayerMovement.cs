@@ -29,6 +29,12 @@ public class PlayerMovement : MonoBehaviour
             {
                 playerAnim.SetFloat("Horizontal", movement.x);
                 playerAnim.SetFloat("Vertical", movement.y);
+
+                //Play walking sfx
+                if (!AudioManager.instance.GetSource("Walk").isPlaying)
+                {
+                    AudioManager.instance.Play("Walk");
+                }
             }
             playerAnim.SetFloat("Speed", movement.sqrMagnitude);
         }
