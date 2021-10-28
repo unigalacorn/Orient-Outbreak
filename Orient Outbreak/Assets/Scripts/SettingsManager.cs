@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class SettingsManager : MonoBehaviour
 {
@@ -19,33 +20,76 @@ public class SettingsManager : MonoBehaviour
     [SerializeField] private Sprite muteSprite;
     [SerializeField] private Sprite unmuteSprite;
 
+    //int[,] resolutionsArray = new int[,] { { 1920, 1080 }, { 1280, 720 } };
+
+    private bool isShown;
+
     // Start is called before the first frame update
     void Start()
     {
-        // Resolutions
-        resolutions =  Screen.resolutions;
+        Screen.SetResolution(1920, 1080, true);
+        transform.GetChild(0).gameObject.SetActive(false);
+        isShown = false;
+        //resolutionDropdown.ClearOptions();
 
-        resolutionDropdown.ClearOptions();
+        //List<string> options = new List<string>();
 
-        List<string> options = new List<string>();
+        //int currentResolutionIndex = 0;
+        //for (int i = 0; i < resolutionsArray.GetLength(i) ; i++)
+        //{
+        //    for (int j = 0; j < resolutionsArray.GetLength(j); j++)
+        //    {
+        //        string option = resolutionsArray[i,j] + " x " + resolutions[i].height;
+        //        options.Add(option);
 
-        int currentResolutionIndex = 0; 
-        for (int i = 0; i < resolutions.Length; i++)
+        //        if (resolutions[i].width == Screen.currentResolution.width &&
+        //           resolutions[i].height == Screen.currentResolution.height)
+        //        {
+
+        //            currentResolutionIndex = i;
+        //        }
+        //    }
+
+
+
+        //// Resolutions
+        //resolutions =  Screen.resolutions;
+        ////resolutions.ap
+        //resolutionDropdown.ClearOptions();
+
+        //List<string> options = new List<string>();
+
+        //int currentResolutionIndex = 0; 
+        //for (int i = 0; i < resolutions.Length; i++)
+        //{
+        //    string option = resolutions[i].width + " x " + resolutions[i].height;
+        //    options.Add(option);
+
+        //    if(resolutions[i].width == Screen.currentResolution.width &&
+        //       resolutions[i].height == Screen.currentResolution.height)
+        //    {
+
+        //        currentResolutionIndex = i;
+        //    }
+        //}
+
+        //resolutionDropdown.AddOptions(options);
+        //resolutionDropdown.value = currentResolutionIndex;
+        //resolutionDropdown.RefreshShownValue();
+    }
+
+    // Hide settings button during minigame
+    void Update()
+    {
+        if (SceneManager.GetActiveScene().name != "MainMenuScene")
         {
-            string option = resolutions[i].width + " x " + resolutions[i].height;
-            options.Add(option);
-
-            if(resolutions[i].width == Screen.currentResolution.width &&
-               resolutions[i].height == Screen.currentResolution.height)
+            if (GameManager.instance.currentState == GameState.Minigame)
             {
-
-                currentResolutionIndex = i;
+                transform.GetChild(1).gameObject.SetActive(false);
             }
+            else
+                transform.GetChild(1).gameObject.SetActive(true);
         }
-
-        resolutionDropdown.AddOptions(options);
-        resolutionDropdown.value = currentResolutionIndex;
-        resolutionDropdown.RefreshShownValue();
     }
 
     private void Awake()
@@ -109,12 +153,37 @@ public class SettingsManager : MonoBehaviour
 
     public void SetResolution(int resolutionIndex)
     {
-        Resolution resolution = resolutions[resolutionIndex];
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+        if(resolutionIndex == 0)
+        {
+            Screen.SetResolution(1920, 1080, true);
+        }
+        else if(resolutionIndex == 1)
+        {
+            Screen.SetResolution(1280, 720, false);
+        }
+
+        //Resolution resolution = resolutions[resolutionIndex];
+        //Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
 
     public void HideSettings()
     {
-        transform.gameObject.SetActive(false);
+        //transform.gameObject.SetActive(false);
+        transform.GetChild(0).gameObject.SetActive(false);
+        isShown = false;
+    }
+
+    public void ToggleSettings()
+    {
+        if (isShown)
+        {
+            transform.GetChild(0).gameObject.SetActive(false);
+            isShown = false;
+        }
+        else
+        {
+            transform.GetChild(0).gameObject.SetActive(true);
+            isShown = true;
+        }
     }
 }

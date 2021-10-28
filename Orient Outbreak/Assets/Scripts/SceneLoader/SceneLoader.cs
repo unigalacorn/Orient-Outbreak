@@ -41,15 +41,15 @@ public class SceneLoader : MonoBehaviour
         audioTransition.SetTrigger("master_fadeOut");
 
         string thisScene = SceneManager.GetActiveScene().name;
-        if (thisScene == "Immunity Booster Scene" | thisScene == "WerkIt Scene" | thisScene == "ShieldsUp Scene")
+        if (thisScene == "Immunity Booster Scene" || thisScene == "WerkIt Scene" || thisScene == "ShieldsUp Scene")
         {
             StartCoroutine(StartTheme());
         }
 
-        // if nextscene is Minigame, stop all audio playing and play new son
-        if (nextScene == "Immunity Booster Scene" | nextScene == "WerkIt Scene" | nextScene == "ShieldsUp Scene")
+        // if nextscene is Minigame, stop all audio playing and play new song
+        if (nextScene == "Immunity Booster Scene" || nextScene == "WerkIt Scene" || nextScene == "ShieldsUp Scene")
         {
-            StartCoroutine(StopMusicPlaying());
+            StartCoroutine(StopMusicPlaying(nextScene));
         }
     }
 
@@ -68,6 +68,7 @@ public class SceneLoader : MonoBehaviour
     IEnumerator StartTheme()
     {
         yield return new WaitForSeconds(waitTime);
+        AudioManager.instance.StopAudio();
         AudioManager.instance.Play("Theme");
     }
 
@@ -81,11 +82,18 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene(nextScene);
     }
 
-    IEnumerator StopMusicPlaying()
+    IEnumerator StopMusicPlaying(string nextScene)
     {
         yield return new WaitForSeconds(waitTime);
 
         AudioManager.instance.StopAudio();
+
+        if(nextScene != "Immunity Booster Scene")
+        {
+            AudioManager.instance.Play("Other Minigame");
+        }
+
+
     }
     #endregion
 }

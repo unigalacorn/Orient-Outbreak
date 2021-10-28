@@ -76,6 +76,15 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: -5574269381342539768, guid: c65a0614decdeeb438df1420615b56b6, type: 2}
     source: {fileID: 0}
+  - name: Other Minigame
+    clip: {fileID: 8300000, guid: f111dc5f13eba2e429a9444fc43cf2cb, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 85146357834089152, guid: c65a0614decdeeb438df1420615b56b6, type: 2}
+    source: {fileID: 0}
   isInTransition: 0
 --- !u!95 &39298121
 Animator:
