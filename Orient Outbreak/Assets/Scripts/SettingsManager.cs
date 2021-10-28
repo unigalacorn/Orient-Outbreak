@@ -6,9 +6,10 @@ using TMPro;
 
 public class SettingsManager : MonoBehaviour
 {
+    public static SettingsManager instance;
+
     public TMP_Dropdown resolutionDropdown;
     Resolution[] resolutions;
-
 
     public Slider bgmVolumeSlider;
     public Slider sfxVolumeSlider;
@@ -45,6 +46,19 @@ public class SettingsManager : MonoBehaviour
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
+    }
+
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     // Slider UI sets bgm volume
