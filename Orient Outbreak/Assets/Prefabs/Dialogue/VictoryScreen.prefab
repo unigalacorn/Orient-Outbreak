@@ -79,7 +79,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Insert text here
+  m_Text: Jose gives the coolers to Lolo Carl which was later given to the scientists.
+    The scientists were able to recreate the omega variant vaccine and Jose saved
+    the world!
 --- !u!114 &17937676229998656
 MonoBehaviour:
   m_ObjectHideFlags: 0
