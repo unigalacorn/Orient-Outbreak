@@ -142,7 +142,7 @@ MonoBehaviour:
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: answers 0
+      - fieldName: answers 1
         node: {fileID: 5259476437187856447}
         reroutePoints: []
       _direction: 0
@@ -314,7 +314,7 @@ MonoBehaviour:
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: answers 0
+      - fieldName: answers 1
         node: {fileID: 5259476437187856447}
         reroutePoints: []
       _direction: 0
@@ -373,7 +373,7 @@ MonoBehaviour:
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: answers 1
+      - fieldName: answers 0
         node: {fileID: 5259476437187856447}
         reroutePoints: []
       _direction: 0
@@ -835,10 +835,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -3777917118219858279}
-        reroutePoints: []
-      - fieldName: input
-        node: {fileID: -6942430420474331374}
+        node: {fileID: -3368692879695357046}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -850,7 +847,10 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -3368692879695357046}
+        node: {fileID: -3777917118219858279}
+        reroutePoints: []
+      - fieldName: input
+        node: {fileID: -6942430420474331374}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -861,5 +861,5 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: 76c86bc0978094f419cd20b409353d3f, type: 2}
   text: Reliable sources huh... can you bring me proof?
   answers:
-  - text: Yes
   - text: No
+  - text: Yes

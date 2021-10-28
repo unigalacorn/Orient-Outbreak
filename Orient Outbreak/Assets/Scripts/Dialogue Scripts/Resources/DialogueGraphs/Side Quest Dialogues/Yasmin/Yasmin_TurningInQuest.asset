@@ -94,7 +94,7 @@ MonoBehaviour:
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: answers 0
+      - fieldName: answers 1
         node: {fileID: 1473736322125025639}
         reroutePoints: []
       _direction: 0
@@ -258,7 +258,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -3349891558972328755}
+        node: {fileID: 5313281327245394041}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -270,7 +270,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 5313281327245394041}
+        node: {fileID: -3349891558972328755}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -281,8 +281,8 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: e004c07e9a16bd642bd66bebd7285fe4, type: 2}
   text: Thanks.. umm.. what was your name again?
   answers:
-  - text: Jose
   - text: Kanye
+  - text: Jose
 --- !u!114 &1971043193856830080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -433,7 +433,7 @@ MonoBehaviour:
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: answers 1
+      - fieldName: answers 0
         node: {fileID: 1473736322125025639}
         reroutePoints: []
       _direction: 0

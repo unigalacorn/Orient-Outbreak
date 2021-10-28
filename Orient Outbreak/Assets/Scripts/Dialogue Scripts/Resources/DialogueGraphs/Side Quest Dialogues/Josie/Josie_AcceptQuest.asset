@@ -381,7 +381,7 @@ MonoBehaviour:
   - {fileID: 9111868915016850977}
   - {fileID: 967090883970542775}
   - {fileID: -4199398859276261691}
-  current: {fileID: -4199398859276261691}
+  current: {fileID: 2814130316591906476}
 --- !u!114 &967090883970542775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -465,7 +465,7 @@ MonoBehaviour:
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: answers 0
+      - fieldName: answers 1
         node: {fileID: 2814130316591906476}
         reroutePoints: []
       _direction: 0
@@ -544,10 +544,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 2107857633341744512}
-        reroutePoints: []
-      - fieldName: input
-        node: {fileID: 7966872892206045120}
+        node: {fileID: 3463160112426339113}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -559,7 +556,10 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 3463160112426339113}
+        node: {fileID: 2107857633341744512}
+        reroutePoints: []
+      - fieldName: input
+        node: {fileID: 7966872892206045120}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -572,8 +572,8 @@ MonoBehaviour:
 
 '
   answers:
-  - text: Yes
   - text: No
+  - text: Yes
 --- !u!114 &3463160112426339113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -609,7 +609,7 @@ MonoBehaviour:
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: answers 1
+      - fieldName: answers 0
         node: {fileID: 2814130316591906476}
         reroutePoints: []
       _direction: 0
@@ -728,7 +728,7 @@ MonoBehaviour:
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: answers 0
+      - fieldName: answers 1
         node: {fileID: 2814130316591906476}
         reroutePoints: []
       _direction: 0

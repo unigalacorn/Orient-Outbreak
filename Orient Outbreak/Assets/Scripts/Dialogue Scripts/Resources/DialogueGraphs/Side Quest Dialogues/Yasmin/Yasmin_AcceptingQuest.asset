@@ -59,10 +59,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -5024691420702963515}
-        reroutePoints: []
-      - fieldName: input
-        node: {fileID: 8011525209607110812}
+        node: {fileID: -5757644229021922936}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -74,7 +71,10 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -5757644229021922936}
+        node: {fileID: -5024691420702963515}
+        reroutePoints: []
+      - fieldName: input
+        node: {fileID: 8011525209607110812}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -85,8 +85,8 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: e004c07e9a16bd642bd66bebd7285fe4, type: 2}
   text: "But I guess it can\u2019t be helped.\r"
   answers:
-  - text: Offer assistance
   - text: Good luck with that
+  - text: Offer assistance
 --- !u!114 &-7493571290048989856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,7 +237,7 @@ MonoBehaviour:
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: answers 1
+      - fieldName: answers 0
         node: {fileID: -8131082829581945949}
         reroutePoints: []
       _direction: 0
@@ -296,7 +296,7 @@ MonoBehaviour:
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: answers 0
+      - fieldName: answers 1
         node: {fileID: -8131082829581945949}
         reroutePoints: []
       _direction: 0
@@ -436,7 +436,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -1445505060994393439}
+        node: {fileID: 1406888904665174624}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -448,7 +448,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 1406888904665174624}
+        node: {fileID: -1445505060994393439}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -459,8 +459,8 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: e004c07e9a16bd642bd66bebd7285fe4, type: 2}
   text: '*sigh*'
   answers:
-  - text: Is everything okay?
   - text: Walk Away
+  - text: Is everything okay?
 --- !u!114 &-1445505060994393439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -496,7 +496,7 @@ MonoBehaviour:
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: answers 0
+      - fieldName: answers 1
         node: {fileID: -1893817445381171177}
         reroutePoints: []
       _direction: 0
@@ -703,7 +703,7 @@ MonoBehaviour:
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: answers 1
+      - fieldName: answers 0
         node: {fileID: -1893817445381171177}
         reroutePoints: []
       _direction: 0
@@ -923,7 +923,7 @@ MonoBehaviour:
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: answers 0
+      - fieldName: answers 1
         node: {fileID: -8131082829581945949}
         reroutePoints: []
       _direction: 0

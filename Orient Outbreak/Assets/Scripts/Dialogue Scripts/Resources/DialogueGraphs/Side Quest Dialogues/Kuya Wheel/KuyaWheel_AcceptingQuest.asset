@@ -195,7 +195,7 @@ MonoBehaviour:
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: answers 0
+      - fieldName: answers 1
         node: {fileID: -4274086846229708042}
         reroutePoints: []
       _direction: 0
@@ -274,10 +274,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 320554350051105719}
-        reroutePoints: []
-      - fieldName: input
-        node: {fileID: -6242092959757266345}
+        node: {fileID: 4348492875397244514}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -289,7 +286,10 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 4348492875397244514}
+        node: {fileID: 320554350051105719}
+        reroutePoints: []
+      - fieldName: input
+        node: {fileID: -6242092959757266345}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -300,8 +300,8 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: 2b3b745c9166038449240efcbd76be19, type: 2}
   text: You think you can help me get rid of the trash?
   answers:
-  - text: Yes
   - text: No
+  - text: Yes
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,7 +363,7 @@ MonoBehaviour:
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: answers 0
+      - fieldName: answers 1
         node: {fileID: -4274086846229708042}
         reroutePoints: []
       _direction: 0
@@ -482,7 +482,7 @@ MonoBehaviour:
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: answers 1
+      - fieldName: answers 0
         node: {fileID: -4274086846229708042}
         reroutePoints: []
       _direction: 0

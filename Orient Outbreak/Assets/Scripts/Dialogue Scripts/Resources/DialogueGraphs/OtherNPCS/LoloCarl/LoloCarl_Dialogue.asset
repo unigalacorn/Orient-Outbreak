@@ -119,7 +119,7 @@ MonoBehaviour:
   - {fileID: -2685580607410514583}
   - {fileID: 7677329735434311727}
   - {fileID: 1985930391145903548}
-  current: {fileID: -2685580607410514583}
+  current: {fileID: 1985930391145903548}
 --- !u!114 &1985930391145903548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,7 +179,7 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: b353fe37ed57cb549b995da5d68186ed, type: 2}
   text: "I\u2019m also quite busy, young man. But I\u2019m sure my daughter Ligaya
     could lend you a hand. She\u2019s the owner of a community pantry. You can find
-    her at <insert location>. Say hi to her for me!"
+    her at hospital area. Say hi to her for me!"
   answers: []
 --- !u!114 &7677329735434311727
 MonoBehaviour:
