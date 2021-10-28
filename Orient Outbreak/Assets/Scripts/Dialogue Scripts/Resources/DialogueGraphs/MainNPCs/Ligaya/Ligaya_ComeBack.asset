@@ -19,6 +19,7 @@ MonoBehaviour:
     - answers
     - input
     - output
+    - answers 0
     values:
     - _fieldName: answers
       _node: {fileID: -1035594174006601785}
@@ -48,11 +49,21 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: -1035594174006601785}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
   input: {fileID: 0}
   output: {fileID: 0}
   character: {fileID: 11400000, guid: 10a5d58d4ea34db4dacfc9eadac0e37a, type: 2}
   text: Sorry. The community pantry is closed during the night. You can comback tomorrow.
-  answers: []
+  answers:
+  - text: Alright
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,4 +78,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: -1035594174006601785}
-  current: {fileID: 0}
+  current: {fileID: -1035594174006601785}
