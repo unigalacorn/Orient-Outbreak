@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: JohnnyVince
   m_EditorClassIdentifier: 
   charName: Johnny Vince
-  charTitle: Frontliner
+  charTitle: Construction Worker
   dialogueSprite: {fileID: 21300000, guid: d49c69957ec7c40439d7dcea3e7f9338, type: 3}
   color: {r: 0, g: 0, b: 0, a: 0}
