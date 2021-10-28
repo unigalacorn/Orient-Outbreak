@@ -63,6 +63,10 @@ public class WerkItManager : MonoBehaviour
     [SerializeField] private GameObject keyUI;
     [SerializeField] private GameObject startLevelPanelUI;
 
+    // Menu UI
+    [SerializeField] private GameObject finishGamePanelUI;
+    [SerializeField] private Text scoreFinishGamePanel;
+
     // Score
     int currentScore;
     int totalScore;
@@ -419,15 +423,14 @@ public class WerkItManager : MonoBehaviour
     void Win()
     {
         pause = true;
-        Debug.Log("You win!");
 
+        finishGamePanelUI.SetActive(true);
+        scoreFinishGamePanel.text = "Score: " + totalScore.ToString();
     }
 
     void LoseLevel()
     {
         // Show Pause Menu 
-
-
         pause = true;
         StartLevel();
         Debug.Log("You lose!");
