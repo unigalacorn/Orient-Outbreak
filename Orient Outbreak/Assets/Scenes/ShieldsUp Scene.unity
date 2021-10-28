@@ -21678,9 +21678,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28bc6f1d959e6574db88b53467cf83a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shieldsUpManager: {fileID: 0}
-  finishGamePanel: {fileID: 0}
-  finalScore: {fileID: 0}
+  shieldsUpManager: {fileID: 1371672474}
+  finishGamePanel: {fileID: 1402952690}
+  finalScore: {fileID: 51101797}
 --- !u!1 &1624070066
 GameObject:
   m_ObjectHideFlags: 0

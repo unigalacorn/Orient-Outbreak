@@ -7,6 +7,10 @@ public class GameManager : MonoBehaviour
     #region Variables
     public static GameManager instance;
 
+    [Header("Cutscene")]
+    [SerializeField] private GameObject firstCutscene;
+    [SerializeField] private GameObject missionAcomplishedCutscene;
+
     [Header("Game State")]
     public GameState currentState;
 
@@ -61,17 +65,29 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        UpdateGameState(GameState.Exploration);     //Temp
+        UpdateGameState(GameState.Cutscene);     //Temp
     }
 
     private void Start()
     {
+        firstCutscene.SetActive(true);
         day = 1;       //temp
         SetDayCycle((int)DayCycles.Morning); // start with sunrise state
     }
     #endregion
 
     #region Game Manager
+
+    public void StartGame()
+    {
+        UpdateGameState(GameState.Exploration);
+    }
+
+    public void MissionAcomplished()
+    {
+        missionAcomplishedCutscene.SetActive(true);
+    }
+
     public void UpdateGameState(GameState newState) //methods that updates the state of the game
     {
         if (currentState != newState)

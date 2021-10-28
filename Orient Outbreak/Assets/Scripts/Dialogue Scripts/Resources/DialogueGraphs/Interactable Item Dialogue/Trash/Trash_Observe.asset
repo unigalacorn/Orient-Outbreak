@@ -51,7 +51,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   character: {fileID: 11400000, guid: 89733cd8ccd19284f80a50305c266aae, type: 2}
-  text: '*Jose notices that there is trash on the floor*'
+  text: '*Jose notices the trash on the floor*'
   answers: []
 --- !u!114 &11400000
 MonoBehaviour:
@@ -67,4 +67,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: -5807008626181305240}
-  current: {fileID: 0}
+  current: {fileID: -5807008626181305240}
