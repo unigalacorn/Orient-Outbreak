@@ -9,7 +9,6 @@ public class SettingsManager : MonoBehaviour
     public TMP_Dropdown resolutionDropdown;
     Resolution[] resolutions;
 
-
     public Slider bgmVolumeSlider;
     public Slider sfxVolumeSlider;
     public Button bgmVolumeMuter;

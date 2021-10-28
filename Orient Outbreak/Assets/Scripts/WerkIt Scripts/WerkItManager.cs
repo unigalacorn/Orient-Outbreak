@@ -17,7 +17,6 @@ public class WerkItManager : MonoBehaviour
 
     float markerPosition;
     float markerDestination;
-
     float markerTimer;
     [SerializeField] float timerMultiplicator = 1f; // multiplicator for marker
 
@@ -50,34 +49,64 @@ public class WerkItManager : MonoBehaviour
     //[SerializeField] SpriteRenderer hitAreaSpriteRenderer;
     [SerializeField] Renderer hitAreaRenderer;
     [SerializeField] Transform progressBarContainer;
-    [SerializeField] float failTimer = 10f;
+    [SerializeField] float failTimer;
+    [SerializeField] float failTimerTotal = 60f;
 
-    //UI
+    // Text UI
     [SerializeField] TextMeshProUGUI keyToClickTextUI;
     [SerializeField] TextMeshProUGUI levelTextUI;
     [SerializeField] TextMeshProUGUI startLevelTextUI;
+    [SerializeField] TextMeshProUGUI failTimerUI;
+    [SerializeField] TextMeshProUGUI scoreUI;
 
+    // Other UI
+    [SerializeField] private GameObject keyUI;
+    [SerializeField] private GameObject startLevelPanelUI;
+
+    // Score
+    int currentScore;
+    int totalScore;
+
+    // Level 
     int currentLevel = 1;
-    int lastLevel = 2;
-
+    int lastLevel = 3;
+    
+    // Bools
     bool pause = false;
     bool isKeyHit;
-
     bool isRightInput = false;
-    //bool isInputSpace = false;
+
+    //for Resizing hit Area
+    Bounds b;
+    float ySize;
+    Vector3 ls;
+    float distance;
+
+    // Key Animators
+    public Animator keyAnimator;//
+
 
     #endregion
 
     #region Unity Functions
     void Start()
     {
-        Resize();
+        //For resizing hitArea
+        b = hitAreaRenderer.bounds;
+        ySize = b.size.y;
+        ls = hitArea.localScale;
+        distance = Vector3.Distance(topPivotHitArea.position, bottomPivotHitArea.position);
+
+        totalScore = 0;
+
         StartLevel();
         //hitAreaVelocity = 0f;
     }
 
     void Update()
     {
+        failTimerUI.text = "TIME: " + ((int) failTimer).ToString();
+
         if (pause) { return; }
         Marker();
         KeyChange();
@@ -91,19 +120,63 @@ public class WerkItManager : MonoBehaviour
     private void FixedUpdate()
     {
         //KeyHit();
+        if (pause) { return; }
+        ////////////////////////////////////
+        hitAreaVelocity -= hitAreaGravityPower * Time.fixedDeltaTime;
+        hitAreaPosition += hitAreaVelocity;
+
+        if (hitAreaPosition - hitAreaSize / 2 <= 0f && hitAreaVelocity < 0f)
+        {
+            hitAreaVelocity = 0f;
+        }
+        if (hitAreaPosition + hitAreaSize / 2 >= 1f && hitAreaVelocity > 0f)
+        {
+            hitAreaVelocity = 0f;
+        }
+
+        //hitAreaPosition = Mathf.Clamp(hitAreaPosition, hitAreaSize / 2, 1 - hitAreaSize / 2);
+        //hitArea.position = Vector3.Lerp(bottomPivotHitArea.position, topPivotHitArea.position, hitAreaPosition);
+        /////////////////////////////////////
+
     }
     #endregion
 
     private void StartLevel()
     {
         pause = true;
+        failTimer = failTimerTotal;
         levelTextUI.text = "Level " + currentLevel.ToString();
 
         startLevelTextUI.text = " Level " + currentLevel.ToString() + " BEGIN!";
-        startLevelTextUI.gameObject.SetActive(true);
+        startLevelPanelUI.gameObject.SetActive(true);
+        keyUI.gameObject.SetActive(false);
 
         // Reset values
         hitAreaProgress = 0f;
+        
+
+        scoreUI.text = "Score: " + totalScore;
+
+        //// Levels
+        if (currentLevel == 1)
+        {
+            hitAreaSize = 0.25f;
+            currentScore = 2000;
+        }
+
+        else if (currentLevel == 2)
+        {
+            hitAreaSize = 0.2f;
+            currentScore = 3500;
+        }
+
+        else if (currentLevel == 3)
+        {
+            hitAreaSize = 0.15f;
+            currentScore = 4500;
+        }
+
+        Resize();
 
         StartCoroutine(WaitBeforeStart());
     }
@@ -112,18 +185,16 @@ public class WerkItManager : MonoBehaviour
     IEnumerator WaitBeforeStart()
     {
         yield return new WaitForSeconds(3);
-        startLevelTextUI.gameObject.SetActive(false);
+        startLevelPanelUI.gameObject.SetActive(false);
+        keyUI.gameObject.SetActive(true);
         pause = false;
     }
 
     void Resize()
     {
-        Bounds b = hitAreaRenderer.bounds;
-        float ySize = b.size.y;
-        Vector3 ls = hitArea.localScale;
-        float distance = Vector3.Distance(topPivotHitArea.position, bottomPivotHitArea.position);
         ls.y = (distance / ySize * hitAreaSize);
         hitArea.localScale = ls;
+        Debug.Log(hitArea.localScale);
     }
 
     void Marker()
@@ -184,22 +255,9 @@ public class WerkItManager : MonoBehaviour
 
     void HitArea()
     {
-        if (keyToClick > 0.5f) // space
+        if (keyToClick < 0.25f) // W
         {
             //isRightInput = Input.GetKeyDown(KeyCode.Space);
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                hitAreaVelocity += hitAreaPower * Time.fixedDeltaTime;
-                //isKeyHit = true;
-            }
-
-            // Display UI which Key to click
-            keyToClickTextUI.text = "SPACE";
-        }
-
-        else if (keyToClick <= 0.5f) // W
-        {
-            //isRightInput = Input.GetKeyDown(KeyCode.W);
             if (Input.GetKeyDown(KeyCode.W))
             {
                 hitAreaVelocity += hitAreaPower * Time.fixedDeltaTime;
@@ -207,24 +265,71 @@ public class WerkItManager : MonoBehaviour
             }
 
             // Display UI which Key to click
-            keyToClickTextUI.text = "W";
+            //keyToClickTextUI.text = "W";
+            this.keyAnimator.SetTrigger("W-Key");
+            //this.keyAnimator.runtimeAnimatorController = wAnimator as RuntimeAnimatorController;
+            //keyAnimator.runtimeAnimatorController = Resources.Load("Assets/Animation/WerkIt/W-Key") as RuntimeAnimatorController;
         }
-
-
-        hitAreaVelocity -= hitAreaGravityPower * Time.fixedDeltaTime;
-        hitAreaPosition += hitAreaVelocity;
-
-        if (hitAreaPosition - hitAreaSize / 2 <= 0f && hitAreaVelocity < 0f)
+        else if (keyToClick >= 0.25f && keyToClick < 0.5f) // A
         {
-            hitAreaVelocity = 0f;
+            //isRightInput = Input.GetKeyDown(KeyCode.W);
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                hitAreaVelocity += hitAreaPower * Time.fixedDeltaTime;
+                //isKeyHit = true;
+            }
+
+            // Display UI which Key to click
+            //keyToClickTextUI.text = "A";
+            this.keyAnimator.SetTrigger("A-Key");
+            //this.keyAnimator.runtimeAnimatorController = aAnimator as RuntimeAnimatorController;
+            //keyAnimator.runtimeAnimatorController = Resources.Load("Assets/Animation/WerkIt/A-Key") as RuntimeAnimatorController;
         }
-        if (hitAreaPosition + hitAreaSize / 2 >= 1f && hitAreaVelocity > 0f)
+
+        else if (keyToClick >= 0.5f && keyToClick < 0.75f) // S
         {
-            hitAreaVelocity = 0f;
+            //isRightInput = Input.GetKeyDown(KeyCode.W);
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                hitAreaVelocity += hitAreaPower * Time.fixedDeltaTime;
+                //isKeyHit = true;
+            }
+
+            // Display UI which Key to click
+            //keyToClickTextUI.text = "S";
+            this.keyAnimator.SetTrigger("S-Key");
         }
+
+        else if (keyToClick >= 0.75f) // D
+        {
+            //isRightInput = Input.GetKeyDown(KeyCode.W);
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                hitAreaVelocity += hitAreaPower * Time.fixedDeltaTime;
+                //isKeyHit = true;
+            }
+
+            // Display UI which Key to click
+            //keyToClickTextUI.text = "D";
+            this.keyAnimator.SetTrigger("D-Key");
+        }
+
+        ////////////////////////////////////
+        //hitAreaVelocity -= hitAreaGravityPower * Time.fixedDeltaTime;
+        //hitAreaPosition += hitAreaVelocity;
+
+        //if (hitAreaPosition - hitAreaSize / 2 <= 0f && hitAreaVelocity < 0f)
+        //{
+        //    hitAreaVelocity = 0f;
+        //}
+        //if (hitAreaPosition + hitAreaSize / 2 >= 1f && hitAreaVelocity > 0f)
+        //{
+        //    hitAreaVelocity = 0f;
+        //}
 
         hitAreaPosition = Mathf.Clamp(hitAreaPosition, hitAreaSize / 2, 1 - hitAreaSize / 2);
         hitArea.position = Vector3.Lerp(bottomPivotHitArea.position, topPivotHitArea.position, hitAreaPosition);
+        /////////////////////////////////////
     }
 
     //void HitAreaTimedResize()
@@ -273,18 +378,41 @@ public class WerkItManager : MonoBehaviour
     void WinLevel()
     {
         pause = true;
+        CalculateScore();
 
         // if won last level, Win
         if (currentLevel == lastLevel)
         {
+            scoreUI.text = totalScore.ToString();
             Win();
         }
 
         // else, go to next level
         else
         {
+
+            
+
+
             currentLevel++;
+            
             StartLevel();
+        }
+    }
+
+    // 2000, 3500, 4500
+    // Calculate Score
+    void CalculateScore()
+    {
+        float timeTaken = failTimerTotal - failTimer;
+        if (timeTaken < 10)
+        {
+            totalScore += currentScore * 1;
+
+        }
+        else
+        {
+            totalScore += (int)(currentScore * (timeTaken/failTimerTotal));
         }
     }
 
@@ -297,6 +425,9 @@ public class WerkItManager : MonoBehaviour
 
     void LoseLevel()
     {
+        // Show Pause Menu 
+
+
         pause = true;
         StartLevel();
         Debug.Log("You lose!");
