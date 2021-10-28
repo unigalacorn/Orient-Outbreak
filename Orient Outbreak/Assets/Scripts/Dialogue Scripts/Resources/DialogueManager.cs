@@ -16,28 +16,63 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Dialogue UI")]
     public GameObject DialogueUI;
+
     public TextMeshProUGUI charNameUI;
     public TextMeshProUGUI charTitleUI;
     public TextMeshProUGUI dialogueLineUI;
+    
+    // Stores original x-scale values of dialogue UI elements
+    private float charNameUI_xScale;
+    private float charTitleUI_xScale;
+    private float dialogueLineUI_xScale;
+
+    private float charNameUI_yScale;
+    private float charTitleUI_yScale;
+    private float dialogueLineUI_yScale;
+
     public Transform dialogueContainer;
+    private float dialogueContainer_xScale;
+    private float dialogueContainer_yScale;
+    private float dialogueContainer_yPos;
+
     public Image charSpriteUI;
 
     [Header("Choices UI")]
     [SerializeField] private Button choiceButtonPrefab;
     [SerializeField] private Transform choicesContainer;
     private List<Button> choiceButtonList;
+    //
+    private float choicesContainer_xScale;
+    private float choicesContainer_yScale;
+
 
     #region Unity Methods
     void Start()
     {
         dialogueStarted = false;
         isReadyForNext = false;
+
+        // Get original x-scale transform values of Dialogue UI elements
+        charNameUI_xScale = charNameUI.GetComponent<Transform>().localScale.x;
+        charTitleUI_xScale = charTitleUI.GetComponent<Transform>().localScale.x;
+        dialogueLineUI_xScale = dialogueLineUI.GetComponent<Transform>().localScale.x;
+        choicesContainer_xScale = choicesContainer.localScale.x;
+
+        // Get original y-scale values of UI elements
+        charNameUI_yScale = charNameUI.GetComponent<Transform>().localScale.y;
+        charTitleUI_yScale = charTitleUI.GetComponent<Transform>().localScale.y;
+        dialogueLineUI_yScale = dialogueLineUI.GetComponent<Transform>().localScale.y;
+        choicesContainer_yScale = choicesContainer.localScale.y;
+
+        dialogueContainer_xScale = dialogueContainer.localScale.x;
+        dialogueContainer_yScale = dialogueContainer.localScale.y;
+        dialogueContainer_yPos = dialogueContainer.localPosition.y;
     }
 
     private void Update()
     {
         //Debug.Log(isReadyForNext);
-        if(dialogueStarted && isReadyForNext && Input.GetKeyDown("space") | Input.GetMouseButtonUp(0))
+        if(dialogueStarted && isReadyForNext && Input.GetKeyDown("space") | Input.GetMouseButtonDown(0))
         {
             isReadyForNext = false;
             NextNode(0);
@@ -50,6 +85,7 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(DialogueGraph graph)
     {
         //_parser = null;
+        Debug.Log(graph.name);
         selectedGraph = graph;
         selectedGraph.Restart();
         prev = -1;
@@ -58,6 +94,8 @@ public class DialogueManager : MonoBehaviour
         isReadyForNext = false;
 
         DialogueUI.SetActive(true);
+
+
 
         //_parser = StartCoroutine(ParseNode());
         ParseNode();
@@ -68,29 +106,66 @@ public class DialogueManager : MonoBehaviour
     // Parses the current node in the dialogue graph
     private void ParseNode()
     {
+        //Debug.Log(selectedGraph.current.character.charName);
         //Debug.Log(prev);
-        
-        // Sets info for dialogue UI elements
-        charNameUI.text = selectedGraph.current.character.charName;
-        charTitleUI.text = selectedGraph.current.character.charTitle;
-        dialogueLineUI.text = selectedGraph.current.text;
-        charSpriteUI.sprite = selectedGraph.current.character.dialogueSprite;
 
-        // Changes display if current speaker is Jose or not
-        if(charNameUI.text == "Jose")
+
+        //if (selectedGraph.current.character.charName == null)
+        //{
+        //   // Debug.Log(selectedGraph.current.character.charName);
+        //    Debug.Log("yo");
+        //    NextNode(0);
+        //    return;
+        //}
+
+        // Sets info for dialogue UI elements
+         try {
+            charNameUI.text = selectedGraph.current.character.charName;
+            charTitleUI.text = selectedGraph.current.character.charTitle;
+            dialogueLineUI.text = selectedGraph.current.text;
+            charSpriteUI.sprite = selectedGraph.current.character.dialogueSprite;
+        }
+        catch
         {
+            isReadyForNext = false;
+            NextNode(0);
+            return;
+        }
+
+
+
+        // Modify transform values of Dialogue UI elements according to if speaker is Jose or not
+        if (charNameUI.text == "Jose")
+        {
+            dialogueContainer.localPosition = new Vector2(200, dialogueContainer_yPos);
+            dialogueContainer.localScale = new Vector2(dialogueContainer_xScale, dialogueContainer_yScale);
+
             charSpriteUI.gameObject.transform.localPosition = new Vector3(-466, -147, 0);
-            dialogueContainer.localPosition = new Vector2(200, -95);
+            
+            charNameUI.GetComponent<Transform>().localScale = new Vector2(charNameUI_xScale, charNameUI_yScale);
+            charTitleUI.GetComponent<Transform>().localScale = new Vector2(charTitleUI_xScale, charTitleUI_yScale);
+            dialogueLineUI.GetComponent<Transform>().localScale = new Vector2(dialogueLineUI_xScale, dialogueLineUI_yScale);
+
+            choicesContainer.localScale = new Vector2(choicesContainer_xScale, choicesContainer_yScale);
         }
         else
         {
-            charSpriteUI.gameObject.transform.localPosition = new Vector3(382, -147, 0);
-            dialogueContainer.localPosition = new Vector2(-267, -95);
+            dialogueContainer.localPosition = new Vector2(-267, dialogueContainer_yPos);
+            dialogueContainer.localScale = new Vector2(dialogueContainer_xScale * -1f, dialogueContainer_yScale);
+
+            charSpriteUI.gameObject.transform.localPosition = new Vector2(382, -147);
+
+            charNameUI.GetComponent<Transform>().localScale = new Vector2(charNameUI_xScale * -1f, charNameUI_yScale);
+            charTitleUI.GetComponent<Transform>().localScale = new Vector2(charTitleUI_xScale * -1f, charTitleUI_yScale);
+            dialogueLineUI.GetComponent<Transform>().localScale = new Vector2(dialogueLineUI_xScale * -1f, dialogueLineUI_yScale);
+
+            choicesContainer.localScale = new Vector2(choicesContainer_xScale * -1f, choicesContainer_yScale);
         }
 
         // If choices exist, instantiate and display buttons
         if(selectedGraph.current.answers.Count > 0)
         {
+            Debug.Log("hasButtons");
             isReadyForNext = false;
             choiceButtonList = new List<Button>();
             int i = 0;
@@ -125,25 +200,34 @@ public class DialogueManager : MonoBehaviour
     // Traverse to next node
     private void NextNode(int index)
     {
+
         //if (_parser != null)
         //{
         //    StopCoroutine(_parser);
         //    _parser = null;
         //}
 
+        prev = selectedGraph.current.GetInstanceID();
+
+
         // traverses to next chat node, and triggers any connected activate quest and minigame node
         selectedGraph.AnswerQuestion(index);
 
         // If reached last consecutive chat node
+        Debug.Log(prev + " " + selectedGraph.current.GetInstanceID());
+
         if (prev == selectedGraph.current.GetInstanceID())
         {
             LastNode();
+
         }
+        else
+        {
+            //prev = selectedGraph.current.GetInstanceID();
 
-        prev = selectedGraph.current.GetInstanceID();
-
-        //_parser = StartCoroutine(ParseNode());
-        ParseNode();
+            //_parser = StartCoroutine(ParseNode());
+            ParseNode();
+        }
     }
 
     // Inactivate Dialogue UI objects
@@ -168,11 +252,14 @@ public class DialogueManager : MonoBehaviour
     // Goes to next node in the dialogue graph that is connected to the player's choice
     private void OnChoiceClicked(int index)
     {
+        
         foreach(Button btn in choiceButtonList)
         {
+            Debug.Log("destroy");
             Destroy(btn.gameObject);
         }
         NextNode(index);
+        //isReadyForNext = false;
     }
     #endregion 
 }

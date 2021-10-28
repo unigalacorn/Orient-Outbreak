@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class ImmunityBoosterManager : MonoBehaviour
 {
     #region Variables
-    [SerializeField] private AudioSource soundtrack;
+    //[SerializeField] private AudioSource soundtrack;
     [SerializeField] private Transform fruitHolderTransform;
     [SerializeField] private float tempo;
     private bool hasStarted;
@@ -51,7 +51,8 @@ public class ImmunityBoosterManager : MonoBehaviour
     IEnumerator StartSoundtrack()
     {
         yield return new WaitForSeconds(0.1f);
-        soundtrack.Play();
+        FindObjectOfType<AudioManager>().Play("Immunity Booster");
+        //soundtrack.Play();
     }
     #endregion
 

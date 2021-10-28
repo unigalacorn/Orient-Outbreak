@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Immunity Booster Scene.unity
     guid: 269496ffa21676f49ad38ad9adb9dcde
+  - enabled: 1
+    path: Assets/Scenes/WerkIt Scene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

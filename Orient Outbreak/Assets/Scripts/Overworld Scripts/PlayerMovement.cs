@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -28,10 +29,27 @@ public class PlayerMovement : MonoBehaviour
 
             if (movement != Vector2.zero)
             {
+
                 playerAnim.SetFloat("Horizontal", movement.x);
                 playerAnim.SetFloat("Vertical", movement.y);
+
+
+                //FindObjectOfType<AudioManager>();
+                //if (!FindObjectOfType<AudioManager>().sounds[1].source.isPlaying)
+                if (!AudioManager.instance.GetSource("Walk").isPlaying)
+                {
+                    
+                    AudioManager.instance.Play("Walk");
+                }
+                //if (as.is)
+                //    as.Play("Walk");
+                //Debug.Log("walking");
+                
+
+
             }
             playerAnim.SetFloat("Speed", movement.sqrMagnitude);
+            
         }
     }
 
@@ -40,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
         if (GameManager.instance.currentState == GameState.Exploration)
         {
             playerRB.MovePosition(playerRB.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
+            
         }
     }
     #endregion

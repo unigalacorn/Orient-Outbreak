@@ -34,7 +34,7 @@ public class MinigameNPC : MonoBehaviour
             GameManager.instance.UpdateGameState(GameState.Dialogue);     //Update Game State to Dialogue
             dialogueManager.StartDialogue(dialogue.dialogueList[0]); // start first dialogue in dialogue list
 
-
+            
 
             //If player accepts challenge, load scene with name "minigameScene"
             //SceneManager.LoadScene(minigameSceneName);

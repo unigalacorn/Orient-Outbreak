@@ -18,7 +18,8 @@ namespace Dialogue
 		public override void Trigger()
 		{
 			GameManager.instance.UpdateGameState(GameState.Minigame);
-			SceneManager.LoadScene(sceneName);
+			//GameManager.instance.ChangeScene(sceneName);
+			SceneLoader.instance.ChangeScene(sceneName);
 			
 			Debug.Log(GameManager.instance.currentState);
 			//gm.AddQuest(questName, questDescription, currentAmount, requiredAmount);
