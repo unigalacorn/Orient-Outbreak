@@ -195,8 +195,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 453.6441, y: -484.35}
-  m_SizeDelta: {x: 791.2789, y: 1401.7}
+  m_AnchoredPosition: {x: 453.6441, y: -728.13}
+  m_SizeDelta: {x: 791.2789, y: 1889.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &134116206
 MonoBehaviour:
@@ -255,17 +255,32 @@ MonoBehaviour:
     Binobo
 
 
+    Christian Binobo
+
+    Francis Jacinto
+
+    Kaye Maceda
+
+    Franz
+    Vilela
+
+
     Francis Jacinto
 
 
+    Christian Binobo
 
-    World Health Organization
-
-    Centers for
-    Disease Control and Prevention
+    Franz Vilela
 
 
-    Miguel Guillermo'
+    World
+    Health Organization
+
+    Centers for Disease Control and Prevention
+
+
+    Miguel
+    Guillermo'
 --- !u!222 &134116207
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -615,8 +630,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -165, y: -484.34595}
-  m_SizeDelta: {x: 442.3685, y: 1401.6682}
+  m_AnchoredPosition: {x: -217.69934, y: -728.136}
+  m_SizeDelta: {x: 547.7671, y: 1889.248}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &603097349
 MonoBehaviour:
@@ -665,20 +680,30 @@ MonoBehaviour:
 
 
 
-    Art/Graphics
+    Lead Artist
+
+
+    Asset
+    Creation
+
+
+
 
 
     Music
 
 
-
-    Facts
-    Sources
+    In-Engine Level Design
 
 
 
+    Facts Sources
 
-    Special Thanks'
+
+
+
+    Special
+    Thanks'
 --- !u!222 &603097350
 CanvasRenderer:
   m_ObjectHideFlags: 0
