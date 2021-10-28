@@ -22,9 +22,14 @@ public class CoolerReciever : MonoBehaviour
     {
         if (Input.GetKeyDown("space") && isPlayerInRange && GameManager.instance.currentState != GameState.Dialogue)
         {
+            Debug.Log(GameManager.instance.isImmunityBoosterDone);
+            Debug.Log(GameManager.instance.isShieldsUpDone);
+            Debug.Log(GameManager.instance.isWerkItDone);
+
             //Win Game
             if (GameManager.instance.isImmunityBoosterDone && GameManager.instance.isShieldsUpDone && GameManager.instance.isWerkItDone)
             {
+                Debug.Log("in");
                 GameManager.instance.UpdateGameState(GameState.Dialogue);
                 dialogueManager.StartDialogue(dialogue.dialogueList[1]);
             }
