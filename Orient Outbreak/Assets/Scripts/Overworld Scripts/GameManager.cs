@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class GameManager : MonoBehaviour
     [Header("Cutscene")]
     [SerializeField] private GameObject firstCutscene;
     [SerializeField] private GameObject missionAcomplishedCutscene;
+
+    [Header("Singletons")]
+    [SerializeField] private GameObject[] singletonArray;
 
     [Header("Game State")]
     public GameState currentState;
@@ -86,6 +90,16 @@ public class GameManager : MonoBehaviour
     public void MissionAcomplished()
     {
         missionAcomplishedCutscene.SetActive(true);
+    }
+
+    public void EndGame()
+    {
+        SceneManager.LoadScene("MainMenuScene");
+
+        for (int i = 0; i < singletonArray.Length; i++)
+        {
+            Destroy(singletonArray[i].gameObject);
+        }
     }
 
     public void UpdateGameState(GameState newState) //methods that updates the state of the game

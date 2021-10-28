@@ -186,7 +186,7 @@ GameObject:
   - component: {fileID: 7607018193364025255}
   - component: {fileID: 7607018193364025254}
   m_Layer: 5
-  m_Name: Edit Button
+  m_Name: Exit Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -294,9 +294,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3205340348301294554}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: OnButtonClickPlay
+      - m_Target: {fileID: 1533768603845082546}
+        m_TargetAssemblyTypeName: EndGame, Assembly-CSharp
+        m_MethodName: CallEndGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -318,7 +318,7 @@ GameObject:
   - component: {fileID: 7607018193492402083}
   - component: {fileID: 7607018193492402082}
   - component: {fileID: 7607018193492402081}
-  - component: {fileID: 3205340348301294554}
+  - component: {fileID: 1533768603845082546}
   m_Layer: 5
   m_Name: VictoryScreen
   m_TagString: Untagged
@@ -407,7 +407,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &3205340348301294554
+--- !u!114 &1533768603845082546
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -416,10 +416,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7607018193492402111}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba8ab376592ea9e4eb6e71578c38bd68, type: 3}
+  m_Script: {fileID: 11500000, guid: fe21e9a6b6910bb4cb81d67630af7bce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minigame: 1
 --- !u!1 &7607018193724592170
 GameObject:
   m_ObjectHideFlags: 0
