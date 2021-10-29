@@ -37,6 +37,23 @@ public class GameManager : MonoBehaviour
     //Deliver food
     public bool isFoodGiven = false;
 
+    [Header("Items")]
+    public bool fact1 = false;
+    public bool fact2 = false;
+    public bool fact3 = false;
+    public bool fact4 = false;
+    public bool fact5 = false;
+    public bool fact6 = false;
+    public bool fact7 = false;
+    public bool fact8 = false;
+    public bool fact9 = false;
+    [Space]
+    public bool trash1 = false;
+    public bool trash2 = false;
+    public bool trash3 = false;
+    public bool trash4 = false;
+    [Space]
+    public bool labcoat = false;
 
     [Header("Player")]
     [Space]
