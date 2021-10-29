@@ -19,6 +19,7 @@ MonoBehaviour:
     - answers
     - input
     - output
+    - answers 0
     values:
     - _fieldName: answers
       _node: {fileID: -8412781083342293428}
@@ -51,11 +52,21 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: -8412781083342293428}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
   input: {fileID: 0}
   output: {fileID: 0}
   character: {fileID: 11400000, guid: c24228bb2a1c1c1428e7cfd0dd355d1b, type: 2}
   text: "Oh! I saw a cooler at the Park. Look for Coach Kudo. I think he kept it.\r"
-  answers: []
+  answers:
+  - text: Okay Thanks
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,7 +82,7 @@ MonoBehaviour:
   nodes:
   - {fileID: 5542733297672308961}
   - {fileID: -8412781083342293428}
-  current: {fileID: 0}
+  current: {fileID: -8412781083342293428}
 --- !u!114 &5542733297672308961
 MonoBehaviour:
   m_ObjectHideFlags: 0
