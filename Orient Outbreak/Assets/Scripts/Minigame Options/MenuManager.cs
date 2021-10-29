@@ -55,7 +55,7 @@ public class MenuManager : MonoBehaviour
 
     public void Settings()
     {
-
+        SettingsManager.instance.ToggleSettings();
     }
 
     public void QuitMiniGame()
