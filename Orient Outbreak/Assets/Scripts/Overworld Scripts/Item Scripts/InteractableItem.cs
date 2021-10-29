@@ -131,7 +131,8 @@ public class InteractableItem : MonoBehaviour
                     {
                         GameManager.instance.IncreaseAmount(sideQuest);
                     }
-                    else if(itemRef == "trash1")
+                    
+                    if(itemRef == "trash1")
                     {
                         GameManager.instance.trash1 = true;
                         Destroy(this);
