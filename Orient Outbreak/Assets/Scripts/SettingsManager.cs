@@ -187,4 +187,10 @@ public class SettingsManager : MonoBehaviour
             isShown = true;
         }
     }
+
+    public void CloseGame()
+    {
+        Application.Quit();
+        //SceneLoader.instance.ChangeScene("MainMenuScene");
+    }
 }
