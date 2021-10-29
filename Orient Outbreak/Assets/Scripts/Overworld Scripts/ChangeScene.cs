@@ -8,7 +8,7 @@ public class ChangeScene : MonoBehaviour
 
     private void Start()
     {
-        GameManager.instance.UpdateGameState(GameState.Cutscene);
+        GameManager.instance.UpdateGameState(GameState.Dialogue);
     }
 
     public void OnButtonClickPlay()
