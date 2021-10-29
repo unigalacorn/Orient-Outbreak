@@ -10,7 +10,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] GameObject GameOverPanel;
 
     private bool isGameOver = false;
-    private static bool gameIsPaused = false;
+    //private static bool gameIsPaused = false;
 
     private void Start()
     {
@@ -32,14 +32,14 @@ public class MenuManager : MonoBehaviour
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
-        gameIsPaused = false;
+        //gameIsPaused = false;
     }
 
     void Pause()
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
-        gameIsPaused = true;
+        //gameIsPaused = true;
     }
 
     public void Retry()
