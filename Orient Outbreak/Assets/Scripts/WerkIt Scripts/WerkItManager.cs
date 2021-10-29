@@ -170,13 +170,13 @@ public class WerkItManager : MonoBehaviour
 
         else if (currentLevel == 2)
         {
-            hitAreaSize = 0.2f;
+            hitAreaSize = 0.22f;
             currentScore = 3500;
         }
 
         else if (currentLevel == 3)
         {
-            hitAreaSize = 0.15f;
+            hitAreaSize = 0.18f;
             currentScore = 4500;
         }
 

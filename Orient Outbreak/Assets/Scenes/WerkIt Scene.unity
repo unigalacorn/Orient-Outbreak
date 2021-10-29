@@ -4419,8 +4419,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -76, y: -18}
-  m_SizeDelta: {x: 384.23, y: 106.47}
+  m_AnchoredPosition: {x: -91.427, y: -29.477}
+  m_SizeDelta: {x: 353.38, y: 129.43}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1680625922
 MonoBehaviour:
@@ -4455,13 +4455,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Catch the fruits by moving side to side!
+  m_Text: 'Click the key that is shown on the screen to keep the green area behind
+    the dumbbell. Fill the progress bar to win!
 
 
-    A or Left Arrow Key to
-    move left
-
-    D or Right Arrow Key to move right'
+    Use WASD Keys or Arrow Keys'
 --- !u!222 &1680625923
 CanvasRenderer:
   m_ObjectHideFlags: 0
