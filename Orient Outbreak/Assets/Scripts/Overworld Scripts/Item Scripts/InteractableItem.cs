@@ -159,7 +159,6 @@ public class InteractableItem : MonoBehaviour
                     }
                 }
             }
-
         }
     }
     #endregion 
