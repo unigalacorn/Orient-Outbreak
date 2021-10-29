@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Marites
   m_EditorClassIdentifier: 
   charName: Marites
-  charTitle: Ant-vaxx
+  charTitle: Anti-vaxx
   dialogueSprite: {fileID: 21300000, guid: d72727201763ba44385c92dd59170c30, type: 3}
   color: {r: 0, g: 0, b: 0, a: 0}
