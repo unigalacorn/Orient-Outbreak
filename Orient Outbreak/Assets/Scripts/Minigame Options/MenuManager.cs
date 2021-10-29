@@ -22,14 +22,9 @@ public class MenuManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape) && !isGameOver)
         {
-            if (gameIsPaused)
-            {
-                Resume();
-            }
-            else
-            {
+
                 Pause();
-            }
+
         }
     }
 
