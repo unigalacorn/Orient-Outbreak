@@ -45,7 +45,7 @@ public class InteractableItem : MonoBehaviour
             Destroy(this);
         else if (itemRef == "trash4" && GameManager.instance.trash4)
             Destroy(this);
-        else if (itemRef == "labgown" && GameManager.instance.fact1)
+        else if (itemRef == "labgown" && GameManager.instance.labcoat)
             Destroy(this);
     }
 
