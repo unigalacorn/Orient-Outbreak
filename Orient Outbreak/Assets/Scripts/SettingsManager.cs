@@ -27,9 +27,10 @@ public class SettingsManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Screen.SetResolution(1920, 1080, true);
-        transform.GetChild(0).gameObject.SetActive(false);
-        isShown = false;
+        SetFullScreen(true);
+        //Screen.SetResolution(1920, 1080, true);
+        //transform.GetChild(0).gameObject.SetActive(false);
+        //isShown = false;
         //resolutionDropdown.ClearOptions();
 
         //List<string> options = new List<string>();

@@ -596,7 +596,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1.5
   m_Text: 'Collect the face masks, face shields, and sanitizers while avoiding the
-    obstacles.
+    obstacles. Reach the end to win!
 
 
     Press SPACE to jump.'
