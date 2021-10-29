@@ -25,20 +25,10 @@ public class ImmunityBoosterManager : MonoBehaviour
     #endregion
 
     #region Unity Methods
+
     private void Start()
     {
-        tempo = tempo / 60f;
-
-
-        //Setup Score and Combo
-        scoreCounter += 0;
-        comboCounter += 0;
-
-        scoreText.text = "SCORE: " + scoreCounter;
-        comboText.text = "COMBO: " + comboCounter;
-
-        hasStarted = true;
-        StartCoroutine(StartSoundtrack());
+        StartCoroutine(StartGame());
     }
 
     private void Update()
@@ -62,6 +52,26 @@ public class ImmunityBoosterManager : MonoBehaviour
     #endregion
 
     #region Coroutines
+    IEnumerator StartGame()
+    {
+        Debug.Log("play game");
+        yield return new WaitForSeconds(2f);
+
+        tempo = tempo / 60f;
+
+
+        //Setup Score and Combo
+        scoreCounter += 0;
+        comboCounter += 0;
+
+        scoreText.text = "SCORE: " + scoreCounter;
+        comboText.text = "COMBO: " + comboCounter;
+
+        hasStarted = true;
+        StartCoroutine(StartSoundtrack());
+        Time.timeScale = 1f;
+    }
+
     IEnumerator StartSoundtrack()
     {
         yield return new WaitForSeconds(1f);
