@@ -24,6 +24,7 @@ public class NormalNPC : MonoBehaviour
         if (Input.GetKeyDown("space") && isPlayerInRange && GameManager.instance.currentState != GameState.Dialogue)
         {
             //Start Dialogue
+            Debug.Log("yotenpc");
             GameManager.instance.UpdateGameState(GameState.Dialogue);     //Update Game State to Dialogue
             dialogueManager.StartDialogue(dialogue.dialogueList[0]); // start first dialogue in dialogue list
         }

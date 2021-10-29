@@ -75,16 +75,21 @@ public class DialogueManager : MonoBehaviour
         if (Input.GetKeyDown("space") | Input.GetMouseButtonDown(0))
         {
             dialogueID++;
-        }
 
-        if(Input.GetKeyDown("space") | Input.GetMouseButtonDown(0) && dialogueStarted && isReadyForNext)
-        {
-            if(dialogueID != 1)
-            {
+            if(dialogueStarted && isReadyForNext && dialogueID != 1){
                 isReadyForNext = false;
                 NextNode(0);
             }
         }
+
+        //if(Input.GetKeyDown("space") | Input.GetMouseButtonDown(0) && dialogueStarted && isReadyForNext)
+        //{
+        //    if(dialogueID != 1)
+        //    {
+        //        isReadyForNext = false;
+        //        NextNode(0);
+        //    }
+        //}
     }
     #endregion
 
@@ -95,7 +100,7 @@ public class DialogueManager : MonoBehaviour
         selectedGraph = graph;
         selectedGraph.Restart();
         prev = -1;
-        dialogueID = 0;
+        dialogueID = 1;
 
         dialogueStarted = true;
         isReadyForNext = false;
@@ -227,9 +232,11 @@ public class DialogueManager : MonoBehaviour
         charSpriteUI.sprite = null;
         DialogueUI.SetActive(false);
 
+        StartCoroutine(ChangeState());
         // Change game state
-        if (GameManager.instance.currentState != GameState.Minigame)
-        GameManager.instance.UpdateGameState(GameState.Exploration);
+        //if (GameManager.instance.currentState != GameState.Minigame)
+        //GameManager.instance.UpdateGameState(GameState.Exploration);
+        //Debug.Log("yeet");
     }
 
     // Goes to next node in the dialogue graph that is connected to the player's choice
@@ -242,4 +249,12 @@ public class DialogueManager : MonoBehaviour
         NextNode(index);
     }
     #endregion 
+
+    IEnumerator ChangeState()
+    {
+        yield return new WaitForEndOfFrame();
+        if (GameManager.instance.currentState != GameState.Minigame)
+            GameManager.instance.UpdateGameState(GameState.Exploration);
+        Debug.Log("yeet");
+    }
 }
