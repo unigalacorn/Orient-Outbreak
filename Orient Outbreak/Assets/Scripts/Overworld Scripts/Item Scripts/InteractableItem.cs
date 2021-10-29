@@ -20,33 +20,33 @@ public class InteractableItem : MonoBehaviour
     private void Awake()
     {
         if (itemRef == "fact1" && GameManager.instance.fact1)
-            Destroy(this);
+            Destroy(gameObject);
         else if (itemRef == "fact2" && GameManager.instance.fact2)
-            Destroy(this);
+            Destroy(gameObject);
         else if (itemRef == "fact3" && GameManager.instance.fact3)
-            Destroy(this);
+            Destroy(gameObject);
         else if (itemRef == "fact4" && GameManager.instance.fact4)
-            Destroy(this);
+            Destroy(gameObject);
         else if (itemRef == "fact5" && GameManager.instance.fact5)
-            Destroy(this);
+            Destroy(gameObject);
         else if (itemRef == "fact6" && GameManager.instance.fact6)
-            Destroy(this);
+            Destroy(gameObject);
         else if (itemRef == "fact7" && GameManager.instance.fact7)
-            Destroy(this);
+            Destroy(gameObject);
         else if (itemRef == "fact8" && GameManager.instance.fact8)
-            Destroy(this);
+            Destroy(gameObject);
         else if (itemRef == "fact9" && GameManager.instance.fact9)
-            Destroy(this);
+            Destroy(gameObject);
         else if (itemRef == "trash1" && GameManager.instance.trash1)
-            Destroy(this);
+            Destroy(gameObject);
         else if (itemRef == "trash2" && GameManager.instance.trash2)
-            Destroy(this);
+            Destroy(gameObject);
         else if (itemRef == "trash3" && GameManager.instance.trash3)
-            Destroy(this);
+            Destroy(gameObject);
         else if (itemRef == "trash4" && GameManager.instance.trash4)
-            Destroy(this);
+            Destroy(gameObject);
         else if (itemRef == "labgown" && GameManager.instance.labcoat)
-            Destroy(this);
+            Destroy(gameObject);
     }
 
     private void Start()
@@ -68,47 +68,47 @@ public class InteractableItem : MonoBehaviour
                 if (itemRef == "fact1")
                 {
                     GameManager.instance.fact1 = true;
-                    Destroy(this);
+                    Destroy(gameObject);
                 }
                 else if (itemRef == "fact2")
                 {
                     GameManager.instance.fact2 = true;
-                    Destroy(this);
+                    Destroy(gameObject);
                 }
                 else if (itemRef == "fact3")
                 {
                     GameManager.instance.fact3 = true;
-                    Destroy(this);
+                    Destroy(gameObject);
                 }
                 else if (itemRef == "fact4")
                 {
                     GameManager.instance.fact4 = true;
-                    Destroy(this);
+                    Destroy(gameObject);
                 }
                 else if (itemRef == "fact5")
                 {
                     GameManager.instance.fact5 = true;
-                    Destroy(this);
+                    Destroy(gameObject);
                 }
                 else if (itemRef == "fact6")
                 {
                     GameManager.instance.fact6 = true;
-                    Destroy(this);
+                    Destroy(gameObject);
                 }
                 else if (itemRef == "fact7")
                 {
                     GameManager.instance.fact7 = true;
-                    Destroy(this);
+                    Destroy(gameObject);
                 }
                 else if (itemRef == "fact8")
                 {
                     GameManager.instance.fact8 = true;
-                    Destroy(this);
+                    Destroy(gameObject);
                 }
                 else if (itemRef == "fact9")
                 {
                     GameManager.instance.fact9 = true;
-                    Destroy(this);
+                    Destroy(gameObject);
                 }
 
 
@@ -135,27 +135,27 @@ public class InteractableItem : MonoBehaviour
                     if(itemRef == "trash1")
                     {
                         GameManager.instance.trash1 = true;
-                        Destroy(this);
+                        Destroy(gameObject);
                     }
                     else if(itemRef == "trash2")
                     {
                         GameManager.instance.trash2 = true;
-                        Destroy(this);
+                        Destroy(gameObject);
                     }
                     else if(itemRef == "trash3")
                     {
                         GameManager.instance.trash3 = true;
-                        Destroy(this);
+                        Destroy(gameObject);
                     }
                     else if(itemRef == "trash4")
                     {
                         GameManager.instance.trash4 = true;
-                        Destroy(this);
+                        Destroy(gameObject);
                     }
                     else if (itemRef == "labcoat")
                     {
                         GameManager.instance.labcoat = true;
-                        Destroy(this);
+                        Destroy(gameObject);
                     }
                 }
             }
