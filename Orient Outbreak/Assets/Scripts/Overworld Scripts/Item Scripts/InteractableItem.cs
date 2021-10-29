@@ -152,7 +152,7 @@ public class InteractableItem : MonoBehaviour
                         GameManager.instance.trash4 = true;
                         Destroy(gameObject);
                     }
-                    else if (itemRef == "labcoat")
+                    else if (itemRef == "labgown")
                     {
                         GameManager.instance.labcoat = true;
                         Destroy(gameObject);
