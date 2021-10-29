@@ -84,7 +84,7 @@ public class SettingsManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name != "MainMenuScene")
         {
-            if (GameManager.instance.currentState == GameState.Minigame)
+            if (GameManager.instance.currentState == GameState.Minigame || GameManager.instance.currentState == GameState.Dialogue)
             {
                 transform.GetChild(1).gameObject.SetActive(false);
             }
