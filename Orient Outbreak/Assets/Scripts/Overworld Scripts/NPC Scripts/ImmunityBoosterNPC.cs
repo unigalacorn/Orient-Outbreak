@@ -76,6 +76,7 @@ public class ImmunityBoosterNPC : MonoBehaviour
         {
             //Play Success
             dialogueManager.StartDialogue(dialogue.dialogueList[1]);
+            GameManager.instance.isImmunityBoosterSuccess = false;
         }
         else if (GameManager.instance.isImmunityBoosterFailed)
         {

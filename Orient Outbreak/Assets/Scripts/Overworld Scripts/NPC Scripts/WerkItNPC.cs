@@ -74,6 +74,7 @@ public class WerkItNPC : MonoBehaviour
         {
             //Play Success
             dialogueManager.StartDialogue(dialogue.dialogueList[1]);
+            GameManager.instance.isWerkItSuccess = false;
         }
         else if (GameManager.instance.isWerkItFailed)
         {

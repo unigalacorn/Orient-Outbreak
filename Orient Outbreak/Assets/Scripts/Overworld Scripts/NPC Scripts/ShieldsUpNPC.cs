@@ -74,6 +74,7 @@ public class ShieldsUpNPC : MonoBehaviour
         {
             //Play Success
             dialogueManager.StartDialogue(dialogue.dialogueList[1]);
+            GameManager.instance.isShieldsUpSuccess = false;
         }
         else if (GameManager.instance.isShieldsUpFailed)
         {
